@@ -1,0 +1,2437 @@
+[
+  {
+    "id": "ACI-1001",
+    "name": "Marjorie Bell",
+    "room": "101B",
+    "age": 74,
+    "gender": "F",
+    "unit": "Memory Care",
+    "primaryDiagnoses": [
+      {
+        "code": "N18.32",
+        "label": "Chronic kidney disease stage 3b"
+      },
+      {
+        "code": "I50.32",
+        "label": "Chronic diastolic heart failure"
+      },
+      {
+        "code": "J44.9",
+        "label": "COPD"
+      }
+    ],
+    "recentVitals": {
+      "bp": "140/59",
+      "hr": 93,
+      "temp": 97.8,
+      "o2": 98,
+      "weight": 140.1
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 133,
+        "k": 4.6,
+        "bun": 23.1,
+        "creatinine": 1.95,
+        "glucose": 195
+      },
+      "cbc": {
+        "wbc": 12.4,
+        "hgb": 12.9,
+        "plt": 282
+      },
+      "ua": {
+        "leukEsterase": "trace",
+        "nitrites": "positive",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Duoneb q6h PRN",
+      "Omeprazole 20 mg daily",
+      "Sertraline 50 mg daily",
+      "Jevity via PEG",
+      "Insulin glargine 12 units QHS",
+      "Lisinopril 10 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 28,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 2,
+      "transfer": 3,
+      "toileting": 1,
+      "eating": 0
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-16",
+      "ard": "2026-03-09",
+      "nextDue": "2026-03-16"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Acute Neurologic",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 18,
+    "pressureInjuryStatus": "Stage 2 heel",
+    "attendingPhysician": "Dr. Patel",
+    "dnrMolstStatus": "MOLST completed - limited interventions",
+    "admissionDate": "2026-02-07",
+    "dischargePlanningStatus": "Short-term rehab target 2 weeks",
+    "recentTests": {
+      "echo": "2025-10-28",
+      "cxr": "2026-03-04",
+      "ekg": "2026-03-01"
+    },
+    "hospitalizations": [],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 23.1, creatinine 1.95."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 14,
+    "therapyMinutesGap": 70,
+    "projectedRate": 670,
+    "ccmMissing": false,
+    "status": "Watch"
+  },
+  {
+    "id": "ACI-1002",
+    "name": "Thomas Greene",
+    "room": "102A",
+    "age": 88,
+    "gender": "M",
+    "unit": "South 1",
+    "primaryDiagnoses": [
+      {
+        "code": "L89.153",
+        "label": "Pressure ulcer sacral region stage 3"
+      },
+      {
+        "code": "A41.9",
+        "label": "Sepsis history"
+      },
+      {
+        "code": "G20.B1",
+        "label": "Parkinson disease"
+      }
+    ],
+    "recentVitals": {
+      "bp": "146/62",
+      "hr": 96,
+      "temp": 99.4,
+      "o2": 96,
+      "weight": 141.5
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 142,
+        "k": 5.1,
+        "bun": 18.6,
+        "creatinine": 1.1,
+        "glucose": 150
+      },
+      "cbc": {
+        "wbc": 6.5,
+        "hgb": 10.1,
+        "plt": 253
+      },
+      "ua": {
+        "leukEsterase": "trace",
+        "nitrites": "positive",
+        "wbc": "10-20"
+      }
+    },
+    "medications": [
+      "Aspirin 81 mg daily",
+      "Gabapentin 100 mg TID",
+      "Duoneb q6h PRN",
+      "Acetaminophen 650 mg q6h PRN",
+      "Furosemide 20 mg daily",
+      "Apixaban 5 mg BID"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 64,
+    "lastHospitalizationDate": "2026-03-04",
+    "adlScores": {
+      "bedMobility": 1,
+      "transfer": 3,
+      "toileting": 4,
+      "eating": 2
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-15",
+      "ard": "2026-03-16",
+      "nextDue": "2026-03-23"
+    },
+    "insuranceType": "Medicare A/B",
+    "pdpmClinicalCategory": "Orthopedic Surgery",
+    "recentInfections": [
+      "Pneumonia"
+    ],
+    "fallRiskScore": 34,
+    "pressureInjuryStatus": "Stage 3 sacral dressing in place",
+    "attendingPhysician": "Dr. Patel",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2026-02-18",
+    "dischargePlanningStatus": "Family meeting pending",
+    "recentTests": {
+      "echo": "2025-10-28",
+      "cxr": "2026-03-02",
+      "ekg": "2026-03-05"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-02-10",
+        "reason": "Sepsis"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 18.6, creatinine 1.1."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 75,
+    "therapyMinutesGap": 68,
+    "projectedRate": 654,
+    "ccmMissing": false,
+    "status": "Discharge Planning"
+  },
+  {
+    "id": "ACI-1003",
+    "name": "Evelyn Hart",
+    "room": "103B",
+    "age": 83,
+    "gender": "F",
+    "unit": "South 1",
+    "primaryDiagnoses": [
+      {
+        "code": "J44.9",
+        "label": "COPD"
+      },
+      {
+        "code": "N39.0",
+        "label": "Urinary tract infection"
+      },
+      {
+        "code": "G20.B1",
+        "label": "Parkinson disease"
+      }
+    ],
+    "recentVitals": {
+      "bp": "137/58",
+      "hr": 101,
+      "temp": 99.8,
+      "o2": 98,
+      "weight": 162.3
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 142,
+        "k": 4.2,
+        "bun": 40.2,
+        "creatinine": 2.16,
+        "glucose": 225
+      },
+      "cbc": {
+        "wbc": 7.0,
+        "hgb": 9.5,
+        "plt": 306
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "positive",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Tamsulosin 0.4 mg nightly",
+      "Sertraline 50 mg daily",
+      "Lisinopril 10 mg daily",
+      "Aspirin 81 mg daily",
+      "Furosemide 20 mg daily",
+      "Insulin glargine 12 units QHS"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 82,
+    "lastHospitalizationDate": "2026-02-09",
+    "adlScores": {
+      "bedMobility": 2,
+      "transfer": 1,
+      "toileting": 3,
+      "eating": 1
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-23",
+      "ard": "2026-03-13",
+      "nextDue": "2026-03-20"
+    },
+    "insuranceType": "Medicare A/B",
+    "pdpmClinicalCategory": "Medical Management",
+    "recentInfections": [],
+    "fallRiskScore": 62,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Morrison",
+    "dnrMolstStatus": "MOLST completed - limited interventions",
+    "admissionDate": "2025-12-05",
+    "dischargePlanningStatus": "Home with services under review",
+    "recentTests": {
+      "echo": "2025-10-20",
+      "cxr": "2026-03-10",
+      "ekg": "2026-03-10"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-01-12",
+        "reason": "Pneumonia"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 40.2, creatinine 2.16."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 34,
+    "therapyMinutesGap": 7,
+    "projectedRate": 643,
+    "ccmMissing": true,
+    "status": "Stable"
+  },
+  {
+    "id": "ACI-1004",
+    "name": "Samuel Ortiz",
+    "room": "104A",
+    "age": 88,
+    "gender": "M",
+    "unit": "South 1",
+    "primaryDiagnoses": [
+      {
+        "code": "F03.90",
+        "label": "Dementia"
+      },
+      {
+        "code": "C34.90",
+        "label": "Lung malignancy history"
+      },
+      {
+        "code": "R13.12",
+        "label": "Dysphagia oropharyngeal phase"
+      }
+    ],
+    "recentVitals": {
+      "bp": "130/91",
+      "hr": 86,
+      "temp": 97.5,
+      "o2": 91,
+      "weight": 124.8
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 141,
+        "k": 4.2,
+        "bun": 37.1,
+        "creatinine": 2.31,
+        "glucose": 104
+      },
+      "cbc": {
+        "wbc": 7.1,
+        "hgb": 11.2,
+        "plt": 343
+      },
+      "ua": {
+        "leukEsterase": "negative",
+        "nitrites": "negative",
+        "wbc": "5-10"
+      }
+    },
+    "medications": [
+      "Furosemide 20 mg daily",
+      "Metoprolol succinate 25 mg daily",
+      "Omeprazole 20 mg daily",
+      "Gabapentin 100 mg TID",
+      "Jevity via PEG",
+      "Apixaban 5 mg BID"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 91,
+    "lastHospitalizationDate": "2026-03-01",
+    "adlScores": {
+      "bedMobility": 1,
+      "transfer": 1,
+      "toileting": 3,
+      "eating": 0
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-15",
+      "ard": "2026-03-26",
+      "nextDue": "2026-04-02"
+    },
+    "insuranceType": "Medicare Advantage",
+    "pdpmClinicalCategory": "Orthopedic Surgery",
+    "recentInfections": [],
+    "fallRiskScore": 70,
+    "pressureInjuryStatus": "Stage 2 heel",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2025-11-03",
+    "dischargePlanningStatus": "Awaiting payer review",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-02-09",
+      "ekg": "2026-03-06"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-11-19",
+        "reason": "AKI"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 37.1, creatinine 2.31."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 56,
+    "therapyMinutesGap": 24,
+    "projectedRate": 568,
+    "ccmMissing": true,
+    "status": "Discharge Planning"
+  },
+  {
+    "id": "ACI-1005",
+    "name": "Lillian Price",
+    "room": "105B",
+    "age": 84,
+    "gender": "F",
+    "unit": "Rehab",
+    "primaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "label": "Type 2 diabetes mellitus"
+      },
+      {
+        "code": "I48.91",
+        "label": "Atrial fibrillation"
+      },
+      {
+        "code": "F03.90",
+        "label": "Dementia"
+      }
+    ],
+    "recentVitals": {
+      "bp": "110/85",
+      "hr": 69,
+      "temp": 98.1,
+      "o2": 91,
+      "weight": 159.6
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 138,
+        "k": 4.9,
+        "bun": 39.3,
+        "creatinine": 1.84,
+        "glucose": 107
+      },
+      "cbc": {
+        "wbc": 15.6,
+        "hgb": 9.3,
+        "plt": 396
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "negative",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Furosemide 20 mg daily",
+      "Metoprolol succinate 25 mg daily",
+      "Acetaminophen 650 mg q6h PRN",
+      "Apixaban 5 mg BID",
+      "Lisinopril 10 mg daily",
+      "Sertraline 50 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 43,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 4,
+      "toileting": 2,
+      "eating": 3
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-26",
+      "ard": "2026-03-22",
+      "nextDue": "2026-03-29"
+    },
+    "insuranceType": "Medicare A/B",
+    "pdpmClinicalCategory": "Orthopedic Surgery",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 22,
+    "pressureInjuryStatus": "Healed sacral wound",
+    "attendingPhysician": "Dr. Rizqui",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2025-12-07",
+    "dischargePlanningStatus": "Short-term rehab target 2 weeks",
+    "recentTests": {
+      "echo": "2025-10-29",
+      "cxr": "2026-02-21",
+      "ekg": "2026-02-28"
+    },
+    "hospitalizations": [],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 39.3, creatinine 1.84."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 93,
+    "therapyMinutesGap": 71,
+    "projectedRate": 858,
+    "ccmMissing": false,
+    "status": "Watch"
+  },
+  {
+    "id": "ACI-1006",
+    "name": "Walter Brooks",
+    "room": "106A",
+    "age": 94,
+    "gender": "M",
+    "unit": "North 2",
+    "primaryDiagnoses": [
+      {
+        "code": "G20.B1",
+        "label": "Parkinson disease"
+      },
+      {
+        "code": "L89.153",
+        "label": "Pressure ulcer sacral region stage 3"
+      },
+      {
+        "code": "N18.32",
+        "label": "Chronic kidney disease stage 3b"
+      }
+    ],
+    "recentVitals": {
+      "bp": "106/62",
+      "hr": 101,
+      "temp": 100.3,
+      "o2": 94,
+      "weight": 171.1
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 140,
+        "k": 5.2,
+        "bun": 33.4,
+        "creatinine": 1.97,
+        "glucose": 118
+      },
+      "cbc": {
+        "wbc": 6.0,
+        "hgb": 11.5,
+        "plt": 296
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "negative",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Levofloxacin 500 mg daily",
+      "Gabapentin 100 mg TID",
+      "Tamsulosin 0.4 mg nightly",
+      "Jevity via PEG",
+      "Atorvastatin 40 mg nightly",
+      "Duoneb q6h PRN"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 77,
+    "lastHospitalizationDate": "2026-01-31",
+    "adlScores": {
+      "bedMobility": 3,
+      "transfer": 2,
+      "toileting": 3,
+      "eating": 1
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-10",
+      "ard": "2026-03-15",
+      "nextDue": "2026-03-22"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 48,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Patel",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2026-01-18",
+    "dischargePlanningStatus": "Short-term rehab target 2 weeks",
+    "recentTests": {
+      "echo": "2026-02-04",
+      "cxr": "2026-03-11",
+      "ekg": "2026-02-27"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-12-10",
+        "reason": "Fall with fracture"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 33.4, creatinine 1.97."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 16,
+    "therapyMinutesGap": 9,
+    "projectedRate": 795,
+    "ccmMissing": true,
+    "status": "Escalating"
+  },
+  {
+    "id": "ACI-1007",
+    "name": "Nina Calloway",
+    "room": "107B",
+    "age": 95,
+    "gender": "F",
+    "unit": "North 2",
+    "primaryDiagnoses": [
+      {
+        "code": "G20.B1",
+        "label": "Parkinson disease"
+      },
+      {
+        "code": "I50.32",
+        "label": "Chronic diastolic heart failure"
+      },
+      {
+        "code": "R13.12",
+        "label": "Dysphagia oropharyngeal phase"
+      }
+    ],
+    "recentVitals": {
+      "bp": "118/65",
+      "hr": 64,
+      "temp": 99.8,
+      "o2": 90,
+      "weight": 201.7
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 141,
+        "k": 5.4,
+        "bun": 27.8,
+        "creatinine": 0.97,
+        "glucose": 157
+      },
+      "cbc": {
+        "wbc": 14.1,
+        "hgb": 12.0,
+        "plt": 314
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "negative",
+        "wbc": "10-20"
+      }
+    },
+    "medications": [
+      "Sertraline 50 mg daily",
+      "Gabapentin 100 mg TID",
+      "Vancomycin IV per pharmacy",
+      "Insulin glargine 12 units QHS",
+      "Atorvastatin 40 mg nightly",
+      "Aspirin 81 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 58,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 3,
+      "transfer": 1,
+      "toileting": 1,
+      "eating": 3
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-09",
+      "ard": "2026-03-20",
+      "nextDue": "2026-03-27"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Acute Neurologic",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 38,
+    "pressureInjuryStatus": "None",
+    "attendingPhysician": "Dr. Patel",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2026-02-02",
+    "dischargePlanningStatus": "Short-term rehab target 2 weeks",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-02-11",
+      "ekg": "2026-02-24"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-11-29",
+        "reason": "AKI"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 27.8, creatinine 0.97."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 75,
+    "therapyMinutesGap": 1,
+    "projectedRate": 577,
+    "ccmMissing": true,
+    "status": "Watch"
+  },
+  {
+    "id": "ACI-1008",
+    "name": "James Holloway",
+    "room": "108A",
+    "age": 78,
+    "gender": "M",
+    "unit": "Memory Care",
+    "primaryDiagnoses": [
+      {
+        "code": "A41.9",
+        "label": "Sepsis history"
+      },
+      {
+        "code": "F03.90",
+        "label": "Dementia"
+      },
+      {
+        "code": "I48.91",
+        "label": "Atrial fibrillation"
+      }
+    ],
+    "recentVitals": {
+      "bp": "158/84",
+      "hr": 97,
+      "temp": 99.9,
+      "o2": 91,
+      "weight": 127.1
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 145,
+        "k": 3.5,
+        "bun": 20.1,
+        "creatinine": 1.22,
+        "glucose": 129
+      },
+      "cbc": {
+        "wbc": 14.7,
+        "hgb": 12.5,
+        "plt": 260
+      },
+      "ua": {
+        "leukEsterase": "trace",
+        "nitrites": "negative",
+        "wbc": "5-10"
+      }
+    },
+    "medications": [
+      "Gabapentin 100 mg TID",
+      "Acetaminophen 650 mg q6h PRN",
+      "Sertraline 50 mg daily",
+      "Vancomycin IV per pharmacy",
+      "Jevity via PEG",
+      "Apixaban 5 mg BID"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 88,
+    "lastHospitalizationDate": "2026-01-21",
+    "adlScores": {
+      "bedMobility": 3,
+      "transfer": 2,
+      "toileting": 1,
+      "eating": 3
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-22",
+      "ard": "2026-03-27",
+      "nextDue": "2026-04-03"
+    },
+    "insuranceType": "Medicare A/B",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 58,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Shah",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2026-02-26",
+    "dischargePlanningStatus": "Short-term rehab target 2 weeks",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-02-25",
+      "ekg": "2026-03-06"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-02-24",
+        "reason": "COPD exacerbation"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 20.1, creatinine 1.22."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 28,
+    "therapyMinutesGap": 51,
+    "projectedRate": 688,
+    "ccmMissing": false,
+    "status": "Stable"
+  },
+  {
+    "id": "ACI-1009",
+    "name": "Ruth Delaney",
+    "room": "109B",
+    "age": 78,
+    "gender": "F",
+    "unit": "South 1",
+    "primaryDiagnoses": [
+      {
+        "code": "M62.81",
+        "label": "Muscle weakness"
+      },
+      {
+        "code": "N18.32",
+        "label": "Chronic kidney disease stage 3b"
+      },
+      {
+        "code": "E11.9",
+        "label": "Type 2 diabetes mellitus"
+      }
+    ],
+    "recentVitals": {
+      "bp": "129/90",
+      "hr": 65,
+      "temp": 98.5,
+      "o2": 97,
+      "weight": 164.0
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 136,
+        "k": 3.8,
+        "bun": 37.7,
+        "creatinine": 2.13,
+        "glucose": 136
+      },
+      "cbc": {
+        "wbc": 8.8,
+        "hgb": 8.9,
+        "plt": 300
+      },
+      "ua": {
+        "leukEsterase": "negative",
+        "nitrites": "positive",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Sertraline 50 mg daily",
+      "Duoneb q6h PRN",
+      "Jevity via PEG",
+      "Metoprolol succinate 25 mg daily",
+      "Gabapentin 100 mg TID",
+      "Vancomycin IV per pharmacy"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 35,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 3,
+      "transfer": 1,
+      "toileting": 3,
+      "eating": 2
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-19",
+      "ard": "2026-03-20",
+      "nextDue": "2026-03-27"
+    },
+    "insuranceType": "Medicare Advantage",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [
+      "Pneumonia"
+    ],
+    "fallRiskScore": 20,
+    "pressureInjuryStatus": "Stage 2 heel",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "MOLST completed - limited interventions",
+    "admissionDate": "2025-12-26",
+    "dischargePlanningStatus": "Short-term rehab target 2 weeks",
+    "recentTests": {
+      "echo": "2026-01-04",
+      "cxr": "2026-02-13",
+      "ekg": "2026-02-20"
+    },
+    "hospitalizations": [],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 37.7, creatinine 2.13."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 52,
+    "therapyMinutesGap": 22,
+    "projectedRate": 835,
+    "ccmMissing": false,
+    "status": "Discharge Planning"
+  },
+  {
+    "id": "ACI-1010",
+    "name": "Victor Salazar",
+    "room": "110A",
+    "age": 69,
+    "gender": "M",
+    "unit": "North 2",
+    "primaryDiagnoses": [
+      {
+        "code": "L89.153",
+        "label": "Pressure ulcer sacral region stage 3"
+      },
+      {
+        "code": "J44.9",
+        "label": "COPD"
+      },
+      {
+        "code": "R13.12",
+        "label": "Dysphagia oropharyngeal phase"
+      }
+    ],
+    "recentVitals": {
+      "bp": "145/77",
+      "hr": 72,
+      "temp": 100.1,
+      "o2": 90,
+      "weight": 155.8
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 135,
+        "k": 4.4,
+        "bun": 34.6,
+        "creatinine": 1.81,
+        "glucose": 94
+      },
+      "cbc": {
+        "wbc": 10.2,
+        "hgb": 10.8,
+        "plt": 193
+      },
+      "ua": {
+        "leukEsterase": "negative",
+        "nitrites": "positive",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Vancomycin IV per pharmacy",
+      "Sertraline 50 mg daily",
+      "Gabapentin 100 mg TID",
+      "Tamsulosin 0.4 mg nightly",
+      "Apixaban 5 mg BID",
+      "Jevity via PEG"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 79,
+    "lastHospitalizationDate": "2026-01-30",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 4,
+      "toileting": 2,
+      "eating": 1
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-05",
+      "ard": "2026-03-18",
+      "nextDue": "2026-03-25"
+    },
+    "insuranceType": "Medicare Advantage",
+    "pdpmClinicalCategory": "Cardiovascular and Coagulations",
+    "recentInfections": [
+      "Wound infection"
+    ],
+    "fallRiskScore": 55,
+    "pressureInjuryStatus": "None",
+    "attendingPhysician": "Dr. Rizqui",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2026-03-07",
+    "dischargePlanningStatus": "Long-term placement likely",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-02-10",
+      "ekg": "2026-03-12"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-12-18",
+        "reason": "Sepsis"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 34.6, creatinine 1.81."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 19,
+    "therapyMinutesGap": 58,
+    "projectedRate": 588,
+    "ccmMissing": false,
+    "status": "Escalating"
+  },
+  {
+    "id": "ACI-1011",
+    "name": "Helen Crawford",
+    "room": "111B",
+    "age": 75,
+    "gender": "F",
+    "unit": "Rehab",
+    "primaryDiagnoses": [
+      {
+        "code": "M62.81",
+        "label": "Muscle weakness"
+      },
+      {
+        "code": "G20.B1",
+        "label": "Parkinson disease"
+      },
+      {
+        "code": "Z86.73",
+        "label": "History of TIA/CVA"
+      }
+    ],
+    "recentVitals": {
+      "bp": "106/76",
+      "hr": 73,
+      "temp": 98.1,
+      "o2": 93,
+      "weight": 196.7
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 136,
+        "k": 4.9,
+        "bun": 33.5,
+        "creatinine": 2.23,
+        "glucose": 226
+      },
+      "cbc": {
+        "wbc": 13.1,
+        "hgb": 11.0,
+        "plt": 211
+      },
+      "ua": {
+        "leukEsterase": "negative",
+        "nitrites": "negative",
+        "wbc": "5-10"
+      }
+    },
+    "medications": [
+      "Acetaminophen 650 mg q6h PRN",
+      "Omeprazole 20 mg daily",
+      "Lisinopril 10 mg daily",
+      "Vancomycin IV per pharmacy",
+      "Apixaban 5 mg BID",
+      "Metoprolol succinate 25 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 67,
+    "lastHospitalizationDate": "2025-12-21",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 4,
+      "toileting": 3,
+      "eating": 3
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-26",
+      "ard": "2026-03-25",
+      "nextDue": "2026-04-01"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Acute Neurologic",
+    "recentInfections": [
+      "Pneumonia"
+    ],
+    "fallRiskScore": 42,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2025-11-14",
+    "dischargePlanningStatus": "Awaiting payer review",
+    "recentTests": {
+      "echo": "2026-02-17",
+      "cxr": "2026-02-15",
+      "ekg": "2026-02-26"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-02-27",
+        "reason": "Pneumonia"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 33.5, creatinine 2.23."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 42,
+    "therapyMinutesGap": 49,
+    "projectedRate": 956,
+    "ccmMissing": false,
+    "status": "Watch"
+  },
+  {
+    "id": "ACI-1012",
+    "name": "Daniel Mercer",
+    "room": "112A",
+    "age": 69,
+    "gender": "M",
+    "unit": "Rehab",
+    "primaryDiagnoses": [
+      {
+        "code": "I69.351",
+        "label": "Hemiplegia after cerebral infarction"
+      },
+      {
+        "code": "I50.32",
+        "label": "Chronic diastolic heart failure"
+      },
+      {
+        "code": "N39.0",
+        "label": "Urinary tract infection"
+      }
+    ],
+    "recentVitals": {
+      "bp": "110/87",
+      "hr": 69,
+      "temp": 97.3,
+      "o2": 94,
+      "weight": 156.5
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 134,
+        "k": 5.1,
+        "bun": 16.9,
+        "creatinine": 1.27,
+        "glucose": 171
+      },
+      "cbc": {
+        "wbc": 12.5,
+        "hgb": 10.7,
+        "plt": 278
+      },
+      "ua": {
+        "leukEsterase": "trace",
+        "nitrites": "positive",
+        "wbc": "10-20"
+      }
+    },
+    "medications": [
+      "Acetaminophen 650 mg q6h PRN",
+      "Insulin glargine 12 units QHS",
+      "Jevity via PEG",
+      "Sertraline 50 mg daily",
+      "Vancomycin IV per pharmacy",
+      "Metoprolol succinate 25 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 54,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 1,
+      "toileting": 1,
+      "eating": 2
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-03",
+      "ard": "2026-03-16",
+      "nextDue": "2026-03-23"
+    },
+    "insuranceType": "Medicare A/B",
+    "pdpmClinicalCategory": "Cardiovascular and Coagulations",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 31,
+    "pressureInjuryStatus": "None",
+    "attendingPhysician": "Dr. Rizqui",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2025-11-03",
+    "dischargePlanningStatus": "Long-term placement likely",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-03-10",
+      "ekg": "2026-02-22"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-02-08",
+        "reason": "Sepsis"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 16.9, creatinine 1.27."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 20,
+    "therapyMinutesGap": 60,
+    "projectedRate": 862,
+    "ccmMissing": true,
+    "status": "Watch"
+  },
+  {
+    "id": "ACI-1013",
+    "name": "Patricia Sloan",
+    "room": "113B",
+    "age": 89,
+    "gender": "F",
+    "unit": "North 2",
+    "primaryDiagnoses": [
+      {
+        "code": "I50.32",
+        "label": "Chronic diastolic heart failure"
+      },
+      {
+        "code": "R13.12",
+        "label": "Dysphagia oropharyngeal phase"
+      },
+      {
+        "code": "N39.0",
+        "label": "Urinary tract infection"
+      }
+    ],
+    "recentVitals": {
+      "bp": "106/73",
+      "hr": 64,
+      "temp": 99.7,
+      "o2": 92,
+      "weight": 173.8
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 136,
+        "k": 3.6,
+        "bun": 46.8,
+        "creatinine": 1.92,
+        "glucose": 118
+      },
+      "cbc": {
+        "wbc": 13.5,
+        "hgb": 9.6,
+        "plt": 191
+      },
+      "ua": {
+        "leukEsterase": "trace",
+        "nitrites": "positive",
+        "wbc": "10-20"
+      }
+    },
+    "medications": [
+      "Lisinopril 10 mg daily",
+      "Atorvastatin 40 mg nightly",
+      "Gabapentin 100 mg TID",
+      "Duoneb q6h PRN",
+      "Furosemide 20 mg daily",
+      "Sertraline 50 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 84,
+    "lastHospitalizationDate": "2026-02-05",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 1,
+      "toileting": 4,
+      "eating": 2
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-06",
+      "ard": "2026-03-20",
+      "nextDue": "2026-03-27"
+    },
+    "insuranceType": "Medicare Advantage",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [],
+    "fallRiskScore": 66,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2025-11-08",
+    "dischargePlanningStatus": "Awaiting payer review",
+    "recentTests": {
+      "echo": "2025-12-15",
+      "cxr": "2026-02-09",
+      "ekg": "2026-02-27"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-01-03",
+        "reason": "COPD exacerbation"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 46.8, creatinine 1.92."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 79,
+    "therapyMinutesGap": 34,
+    "projectedRate": 685,
+    "ccmMissing": true,
+    "status": "Stable"
+  },
+  {
+    "id": "ACI-1014",
+    "name": "Anthony Russo",
+    "room": "114A",
+    "age": 95,
+    "gender": "M",
+    "unit": "Memory Care",
+    "primaryDiagnoses": [
+      {
+        "code": "A41.9",
+        "label": "Sepsis history"
+      },
+      {
+        "code": "M62.81",
+        "label": "Muscle weakness"
+      },
+      {
+        "code": "S72.001D",
+        "label": "Right hip fracture aftercare"
+      }
+    ],
+    "recentVitals": {
+      "bp": "146/75",
+      "hr": 93,
+      "temp": 97.1,
+      "o2": 91,
+      "weight": 159.4
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 134,
+        "k": 4.4,
+        "bun": 35.5,
+        "creatinine": 1.34,
+        "glucose": 109
+      },
+      "cbc": {
+        "wbc": 5.7,
+        "hgb": 12.7,
+        "plt": 293
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "positive",
+        "wbc": "20+"
+      }
+    },
+    "medications": [
+      "Aspirin 81 mg daily",
+      "Omeprazole 20 mg daily",
+      "Jevity via PEG",
+      "Gabapentin 100 mg TID",
+      "Vancomycin IV per pharmacy",
+      "Levofloxacin 500 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 72,
+    "lastHospitalizationDate": "2026-01-11",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 1,
+      "toileting": 1,
+      "eating": 2
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-15",
+      "ard": "2026-03-16",
+      "nextDue": "2026-03-23"
+    },
+    "insuranceType": "Medicare A/B",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [
+      "Wound infection"
+    ],
+    "fallRiskScore": 44,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Patel",
+    "dnrMolstStatus": "MOLST completed - limited interventions",
+    "admissionDate": "2025-12-26",
+    "dischargePlanningStatus": "Awaiting payer review",
+    "recentTests": {
+      "echo": "2025-10-04",
+      "cxr": "2026-02-17",
+      "ekg": "2026-02-28"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-11-24",
+        "reason": "Fall with fracture"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 35.5, creatinine 1.34."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 46,
+    "therapyMinutesGap": 45,
+    "projectedRate": 879,
+    "ccmMissing": false,
+    "status": "Escalating"
+  },
+  {
+    "id": "ACI-1015",
+    "name": "Beatrice Monroe",
+    "room": "115B",
+    "age": 93,
+    "gender": "F",
+    "unit": "North 2",
+    "primaryDiagnoses": [
+      {
+        "code": "Z86.73",
+        "label": "History of TIA/CVA"
+      },
+      {
+        "code": "M62.81",
+        "label": "Muscle weakness"
+      },
+      {
+        "code": "R13.12",
+        "label": "Dysphagia oropharyngeal phase"
+      }
+    ],
+    "recentVitals": {
+      "bp": "120/72",
+      "hr": 81,
+      "temp": 97.8,
+      "o2": 88,
+      "weight": 124.3
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 134,
+        "k": 3.8,
+        "bun": 22.2,
+        "creatinine": 0.9,
+        "glucose": 224
+      },
+      "cbc": {
+        "wbc": 11.0,
+        "hgb": 12.3,
+        "plt": 234
+      },
+      "ua": {
+        "leukEsterase": "trace",
+        "nitrites": "negative",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Tamsulosin 0.4 mg nightly",
+      "Omeprazole 20 mg daily",
+      "Lisinopril 10 mg daily",
+      "Gabapentin 100 mg TID",
+      "Aspirin 81 mg daily",
+      "Metoprolol succinate 25 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 47,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 1,
+      "transfer": 3,
+      "toileting": 4,
+      "eating": 3
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-04",
+      "ard": "2026-03-17",
+      "nextDue": "2026-03-24"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Medical Management",
+    "recentInfections": [],
+    "fallRiskScore": 24,
+    "pressureInjuryStatus": "Stage 1 coccyx",
+    "attendingPhysician": "Dr. Rizqui",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2025-12-19",
+    "dischargePlanningStatus": "Family meeting pending",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-03-07",
+      "ekg": "2026-03-01"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-12-27",
+        "reason": "CHF exacerbation"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 22.2, creatinine 0.9."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 77,
+    "therapyMinutesGap": 6,
+    "projectedRate": 597,
+    "ccmMissing": true,
+    "status": "Escalating"
+  },
+  {
+    "id": "ACI-1016",
+    "name": "Charles Whitman",
+    "room": "116A",
+    "age": 86,
+    "gender": "M",
+    "unit": "North 1",
+    "primaryDiagnoses": [
+      {
+        "code": "R13.12",
+        "label": "Dysphagia oropharyngeal phase"
+      },
+      {
+        "code": "J18.9",
+        "label": "Pneumonia"
+      },
+      {
+        "code": "C34.90",
+        "label": "Lung malignancy history"
+      }
+    ],
+    "recentVitals": {
+      "bp": "162/71",
+      "hr": 98,
+      "temp": 97.9,
+      "o2": 98,
+      "weight": 190.0
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 139,
+        "k": 5.2,
+        "bun": 35.4,
+        "creatinine": 2.04,
+        "glucose": 108
+      },
+      "cbc": {
+        "wbc": 7.7,
+        "hgb": 11.2,
+        "plt": 250
+      },
+      "ua": {
+        "leukEsterase": "negative",
+        "nitrites": "negative",
+        "wbc": "0-5"
+      }
+    },
+    "medications": [
+      "Duoneb q6h PRN",
+      "Furosemide 20 mg daily",
+      "Sertraline 50 mg daily",
+      "Aspirin 81 mg daily",
+      "Omeprazole 20 mg daily",
+      "Tamsulosin 0.4 mg nightly"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 93,
+    "lastHospitalizationDate": "2026-02-06",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 3,
+      "toileting": 1,
+      "eating": 1
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-22",
+      "ard": "2026-03-12",
+      "nextDue": "2026-03-19"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Cardiovascular and Coagulations",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 73,
+    "pressureInjuryStatus": "Stage 2 heel",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2026-02-14",
+    "dischargePlanningStatus": "Long-term placement likely",
+    "recentTests": {
+      "echo": "2025-09-15",
+      "cxr": "2026-02-27",
+      "ekg": "2026-02-28"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-02-13",
+        "reason": "Fall with fracture"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 35.4, creatinine 2.04."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 32,
+    "therapyMinutesGap": 19,
+    "projectedRate": 656,
+    "ccmMissing": true,
+    "status": "Stable"
+  },
+  {
+    "id": "ACI-1017",
+    "name": "Irene Foster",
+    "room": "117B",
+    "age": 69,
+    "gender": "F",
+    "unit": "Memory Care",
+    "primaryDiagnoses": [
+      {
+        "code": "M62.81",
+        "label": "Muscle weakness"
+      },
+      {
+        "code": "G20.B1",
+        "label": "Parkinson disease"
+      },
+      {
+        "code": "Z86.73",
+        "label": "History of TIA/CVA"
+      }
+    ],
+    "recentVitals": {
+      "bp": "104/85",
+      "hr": 105,
+      "temp": 98.3,
+      "o2": 92,
+      "weight": 188.4
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 143,
+        "k": 4.2,
+        "bun": 34.2,
+        "creatinine": 1.19,
+        "glucose": 94
+      },
+      "cbc": {
+        "wbc": 6.7,
+        "hgb": 12.0,
+        "plt": 216
+      },
+      "ua": {
+        "leukEsterase": "negative",
+        "nitrites": "negative",
+        "wbc": "10-20"
+      }
+    },
+    "medications": [
+      "Metoprolol succinate 25 mg daily",
+      "Acetaminophen 650 mg q6h PRN",
+      "Vancomycin IV per pharmacy",
+      "Lisinopril 10 mg daily",
+      "Aspirin 81 mg daily",
+      "Atorvastatin 40 mg nightly"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 61,
+    "lastHospitalizationDate": "2026-02-16",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 3,
+      "toileting": 2,
+      "eating": 3
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-20",
+      "ard": "2026-03-18",
+      "nextDue": "2026-03-25"
+    },
+    "insuranceType": "Medicare Advantage",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [],
+    "fallRiskScore": 36,
+    "pressureInjuryStatus": "None",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2026-02-20",
+    "dischargePlanningStatus": "Family meeting pending",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-03-05",
+      "ekg": "2026-02-14"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-02-07",
+        "reason": "Pneumonia"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 34.2, creatinine 1.19."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 56,
+    "therapyMinutesGap": 63,
+    "projectedRate": 667,
+    "ccmMissing": false,
+    "status": "Stable"
+  },
+  {
+    "id": "ACI-1018",
+    "name": "Leonard Pike",
+    "room": "118A",
+    "age": 83,
+    "gender": "M",
+    "unit": "South 1",
+    "primaryDiagnoses": [
+      {
+        "code": "I10",
+        "label": "Hypertension"
+      },
+      {
+        "code": "J18.9",
+        "label": "Pneumonia"
+      },
+      {
+        "code": "N18.32",
+        "label": "Chronic kidney disease stage 3b"
+      }
+    ],
+    "recentVitals": {
+      "bp": "141/89",
+      "hr": 98,
+      "temp": 98.7,
+      "o2": 88,
+      "weight": 145.0
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 142,
+        "k": 5.1,
+        "bun": 47.0,
+        "creatinine": 1.39,
+        "glucose": 140
+      },
+      "cbc": {
+        "wbc": 10.8,
+        "hgb": 13.3,
+        "plt": 306
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "negative",
+        "wbc": "10-20"
+      }
+    },
+    "medications": [
+      "Vancomycin IV per pharmacy",
+      "Jevity via PEG",
+      "Omeprazole 20 mg daily",
+      "Aspirin 81 mg daily",
+      "Metoprolol succinate 25 mg daily",
+      "Furosemide 20 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 69,
+    "lastHospitalizationDate": "2026-02-26",
+    "adlScores": {
+      "bedMobility": 2,
+      "transfer": 2,
+      "toileting": 3,
+      "eating": 0
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-03",
+      "ard": "2026-03-19",
+      "nextDue": "2026-03-26"
+    },
+    "insuranceType": "Medicare Advantage",
+    "pdpmClinicalCategory": "Pulmonary",
+    "recentInfections": [
+      "Pneumonia"
+    ],
+    "fallRiskScore": 40,
+    "pressureInjuryStatus": "None",
+    "attendingPhysician": "Dr. Shah",
+    "dnrMolstStatus": "Full Code",
+    "admissionDate": "2025-11-11",
+    "dischargePlanningStatus": "Family meeting pending",
+    "recentTests": {
+      "echo": "2026-01-14",
+      "cxr": "2026-02-08",
+      "ekg": "2026-02-19"
+    },
+    "hospitalizations": [
+      {
+        "date": "2026-01-21",
+        "reason": "Fall with fracture"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 47.0, creatinine 1.39."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 94,
+    "therapyMinutesGap": 34,
+    "projectedRate": 732,
+    "ccmMissing": false,
+    "status": "Discharge Planning"
+  },
+  {
+    "id": "ACI-1019",
+    "name": "Gloria Bennett",
+    "room": "119B",
+    "age": 76,
+    "gender": "F",
+    "unit": "South 1",
+    "primaryDiagnoses": [
+      {
+        "code": "J18.9",
+        "label": "Pneumonia"
+      },
+      {
+        "code": "S72.001D",
+        "label": "Right hip fracture aftercare"
+      },
+      {
+        "code": "M62.81",
+        "label": "Muscle weakness"
+      }
+    ],
+    "recentVitals": {
+      "bp": "155/89",
+      "hr": 67,
+      "temp": 98.8,
+      "o2": 95,
+      "weight": 151.1
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 136,
+        "k": 4.9,
+        "bun": 45.5,
+        "creatinine": 1.56,
+        "glucose": 176
+      },
+      "cbc": {
+        "wbc": 14.5,
+        "hgb": 12.8,
+        "plt": 340
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "positive",
+        "wbc": "20+"
+      }
+    },
+    "medications": [
+      "Gabapentin 100 mg TID",
+      "Levofloxacin 500 mg daily",
+      "Apixaban 5 mg BID",
+      "Omeprazole 20 mg daily",
+      "Vancomycin IV per pharmacy",
+      "Tamsulosin 0.4 mg nightly"
+    ],
+    "recentNotes": [
+      "Nursing reports increased fatigue and poor intake over last 72 hours.",
+      "Provider note: monitor fluid balance, renal function, and oxygen trend closely.",
+      "Therapy note: decline in transfer endurance with higher assist needs."
+    ],
+    "rehospitalizationRisk": 86,
+    "lastHospitalizationDate": "2026-01-10",
+    "adlScores": {
+      "bedMobility": 4,
+      "transfer": 2,
+      "toileting": 4,
+      "eating": 0
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-03-07",
+      "ard": "2026-03-26",
+      "nextDue": "2026-04-02"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Cardiovascular and Coagulations",
+    "recentInfections": [
+      "UTI"
+    ],
+    "fallRiskScore": 60,
+    "pressureInjuryStatus": "Healed sacral wound",
+    "attendingPhysician": "Dr. Nguyen",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2026-01-04",
+    "dischargePlanningStatus": "Long-term placement likely",
+    "recentTests": {
+      "echo": "2026-02-13",
+      "cxr": "2026-03-03",
+      "ekg": "2026-02-25"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-12-14",
+        "reason": "Pneumonia"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 45.5, creatinine 1.56."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 16,
+    "therapyMinutesGap": 56,
+    "projectedRate": 571,
+    "ccmMissing": false,
+    "status": "Stable"
+  },
+  {
+    "id": "ACI-1020",
+    "name": "Harold Kim",
+    "room": "120A",
+    "age": 87,
+    "gender": "M",
+    "unit": "Rehab",
+    "primaryDiagnoses": [
+      {
+        "code": "J44.9",
+        "label": "COPD"
+      },
+      {
+        "code": "S72.001D",
+        "label": "Right hip fracture aftercare"
+      },
+      {
+        "code": "N39.0",
+        "label": "Urinary tract infection"
+      }
+    ],
+    "recentVitals": {
+      "bp": "157/92",
+      "hr": 60,
+      "temp": 99.4,
+      "o2": 91,
+      "weight": 178.8
+    },
+    "recentLabs": {
+      "bmp": {
+        "na": 143,
+        "k": 4.2,
+        "bun": 20.9,
+        "creatinine": 1.5,
+        "glucose": 161
+      },
+      "cbc": {
+        "wbc": 15.5,
+        "hgb": 10.4,
+        "plt": 286
+      },
+      "ua": {
+        "leukEsterase": "positive",
+        "nitrites": "negative",
+        "wbc": "20+"
+      }
+    },
+    "medications": [
+      "Apixaban 5 mg BID",
+      "Acetaminophen 650 mg q6h PRN",
+      "Gabapentin 100 mg TID",
+      "Omeprazole 20 mg daily",
+      "Metoprolol succinate 25 mg daily",
+      "Aspirin 81 mg daily"
+    ],
+    "recentNotes": [
+      "Nursing reports steady oral intake and participation with therapy over last 72 hours.",
+      "Provider note: continue restorative program and maintain fall precautions.",
+      "Therapy note: improving gait distance with walker and cueing."
+    ],
+    "rehospitalizationRisk": 52,
+    "lastHospitalizationDate": null,
+    "adlScores": {
+      "bedMobility": 2,
+      "transfer": 3,
+      "toileting": 1,
+      "eating": 0
+    },
+    "mdsAssessmentDates": {
+      "lastCompleted": "2026-02-12",
+      "ard": "2026-03-22",
+      "nextDue": "2026-03-29"
+    },
+    "insuranceType": "Medicaid",
+    "pdpmClinicalCategory": "Acute Neurologic",
+    "recentInfections": [
+      "Wound infection"
+    ],
+    "fallRiskScore": 29,
+    "pressureInjuryStatus": "Stage 2 heel",
+    "attendingPhysician": "Dr. Patel",
+    "dnrMolstStatus": "DNR/DNI",
+    "admissionDate": "2026-01-30",
+    "dischargePlanningStatus": "Family meeting pending",
+    "recentTests": {
+      "echo": null,
+      "cxr": "2026-02-13",
+      "ekg": "2026-02-23"
+    },
+    "hospitalizations": [
+      {
+        "date": "2025-12-02",
+        "reason": "Sepsis"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-03-04",
+        "type": "Lab",
+        "summary": "BMP showed BUN 20.9, creatinine 1.5."
+      },
+      {
+        "date": "2026-03-08",
+        "type": "Nursing",
+        "summary": "Change in appetite and sleep documented."
+      },
+      {
+        "date": "2026-03-11",
+        "type": "Provider",
+        "summary": "Risk review and medication reconciliation completed."
+      },
+      {
+        "date": "2026-03-14",
+        "type": "Care Plan",
+        "summary": "Apex risk engine refreshed intervention priorities."
+      }
+    ],
+    "medicareBenefitDay": 25,
+    "therapyMinutesGap": 22,
+    "projectedRate": 560,
+    "ccmMissing": false,
+    "status": "Watch"
+  }
+]

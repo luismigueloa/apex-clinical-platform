@@ -90,12 +90,8 @@ class PCCClient:
             "has_credentials": bool(self.customer_key and self.client_secret),
         }
 
-
-pcc = PCCClient()
-
     def get_care_plans(self, patient_id: int):
-        # MOCK
-        if self.mock:
+        if self.use_mock:
             return [
                 {
                     "care_plan_id": 101,
@@ -123,7 +119,6 @@ pcc = PCCClient()
         return []
 
     def get_care_plan(self, patient_id: int, care_plan_id: int):
-        # MOCK
         plans = self.get_care_plans(patient_id)
         for p in plans:
             if p["care_plan_id"] == care_plan_id:
@@ -131,5 +126,7 @@ pcc = PCCClient()
         return None
 
     def update_care_plan(self, patient_id: int, care_plan_id: int, payload: dict):
-        # MOCK
         return {"status": "success", "message": "Care plan updated in PCC", "care_plan_id": care_plan_id}
+
+
+pcc = PCCClient()

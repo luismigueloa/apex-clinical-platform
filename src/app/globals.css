@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F8F9FA;
+  --bg-card: #FFFFFF;
+  --border: #E5E7EB;
+  --navy: #1B3A5C;
+  --risk-high: #DC2626;
+  --risk-medium: #D97706;
+  --risk-low: #16A34A;
+  --data-blue: #2563EB;
+  --text-primary: #111827;
+  --text-muted: #6B7280;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  padding: 20px;
+}

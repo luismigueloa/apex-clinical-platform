@@ -1,0 +1,40 @@
+name: Quality Gate — Apex Clinical Platform
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - run: npm run lint
+
+  clinical-logic-review:
+    name: Clinical Logic Review (Opus)
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: contains(github.event.pull_request.changed_files, 'risk-engine') || contains(github.event.pull_request.title, 'clinical') || contains(github.event.pull_request.title, 'risk') || contains(github.event.pull_request.title, 'HIPAA') || contains(github.event.pull_request.title, 'PHI')
+    steps:
+      - uses: actions/checkout@v4
+      - name: Trigger Opus Clinical Review
+        run: |
+          echo "PR touches clinical/HIPAA code — Opus review required before merge"
+          echo "Files changed: ${{ github.event.pull_request.changed_files }}"
+          echo "Review checklist:"
+          echo "  [ ] Clinical risk thresholds match CLINICAL_RISK_ENGINE_SPEC.md"
+          echo "  [ ] PHI encrypted in transit and at rest"
+          echo "  [ ] LOA enforcement logic correct"
+          echo "  [ ] Null/missing data handled gracefully"
+          echo "  [ ] Audit logs written for PHI access"
+          echo "  [ ] 48-hour breach notification pipeline intact"

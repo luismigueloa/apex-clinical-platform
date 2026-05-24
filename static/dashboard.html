@@ -9,27 +9,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #F2F2F7;
+      --bg-primary: #FAFBFC;
       --bg-card: #FFFFFF;
-      --sidebar-bg: #1C1C1E;
-      --sidebar-active: #007AFF;
-      --sidebar-active-bg: rgba(0,122,255,0.15);
-      --sidebar-text: #EBEBF5;
-      --sidebar-icon: #8E8E93;
-      --color-critical: #FF3B30;
-      --color-warning: #FF9F0A;
-      --color-good: #30D158;
-      --color-info: #007AFF;
-      --color-purple: #BF5AF2;
-      --color-teal: #5AC8FA;
-      --color-pink: #FF2D55;
-      --text-primary: #1C1C1E;
-      --text-secondary: #6C6C70;
-      --text-tertiary: #AEAEB2;
-      --border-color: #E5E5EA;
+      --sidebar-bg: #0A1628;
+      --sidebar-active: #0066FF;
+      --sidebar-active-bg: rgba(0,102,255,0.14);
+      --sidebar-text: #CBD5E1;
+      --sidebar-icon: #64748B;
+      --color-critical: #EF4444;
+      --color-warning: #F59E0B;
+      --color-good: #10B981;
+      --color-info: #0066FF;
+      --color-purple: #8B5CF6;
+      --color-teal: #06B6D4;
+      --color-pink: #EC4899;
+      --text-primary: #0F172A;
+      --text-secondary: #64748B;
+      --text-tertiary: #94A3B8;
+      --border-color: #E2E8F0;
       --radius-card: 16px;
       --radius-btn: 12px;
-      --shadow-card: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-card-hover: 0 4px 8px rgba(0,0,0,0.06), 0 12px 28px rgba(0,0,0,0.10);
       --font-system: -apple-system, "SF Pro Display", BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:var(--font-system);background:var(--bg-primary);color:var(--text-primary)}
@@ -37,25 +38,35 @@
     .sidebar{background:var(--sidebar-bg);padding:24px 18px;position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid rgba(255,255,255,.06)}
     .brand{color:#fff;font-size:22px;font-weight:800;line-height:1.15;margin-bottom:24px;letter-spacing:-.02em}
     #nav{display:flex;flex-direction:column;gap:6px}
-    .nav-item{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--sidebar-text);padding:12px 14px 12px 16px;border-radius:12px;cursor:pointer;font-size:14px;border-left:3px solid transparent;transition:.2s ease;position:relative}
-    .nav-item:hover{background:rgba(255,255,255,.04)}
-    .nav-item.active{background:var(--sidebar-active-bg);border-left-color:var(--sidebar-active);color:var(--sidebar-active)}
+    .nav-item{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--sidebar-text);padding:12px 14px 12px 16px;border-radius:12px;cursor:pointer;font-size:14px;border-left:3px solid transparent;transition:background .18s ease, color .18s ease, border-color .22s cubic-bezier(.4,0,.2,1), transform .12s ease;position:relative}
+    .nav-item:hover{background:rgba(255,255,255,.05);transform:translateX(2px)}
+    .nav-item.active{background:var(--sidebar-active-bg);border-left-color:var(--sidebar-active);color:var(--sidebar-active);box-shadow:inset 0 0 0 1px rgba(0,102,255,.12)}
     .nav-text{display:flex;align-items:center;gap:10px;min-width:0}.nav-icon{color:var(--sidebar-icon)}.nav-item.active .nav-icon{color:var(--sidebar-active)} .nav-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .nav-count{min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff}
     .nav-item.active .nav-count{background:rgba(0,122,255,.2);color:#d9ebff}
     .main-content{padding:24px 28px 140px;overflow:auto}
-    .page{display:none;opacity:0;transform:translateY(8px)} .page.active{display:block;opacity:1;transform:translateY(0);animation:pageFade .2s ease}
-    @keyframes pageFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .page{display:none;opacity:0;transform:translateY(8px)} .page.active{display:block;opacity:1;transform:translateY(0)}
+    .page.page-enter{animation:pageFadeIn .2s ease forwards}
+    .page.page-exit{animation:pageFadeOut .1s ease forwards}
+    @keyframes pageFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pageFadeOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-6px)}}
     .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:20px;flex-wrap:wrap}.title{font-size:34px;font-weight:800;margin:0 0 6px;letter-spacing:-.03em}.subtitle{color:var(--text-secondary);margin:0;max-width:900px}
     .page-header{background:linear-gradient(135deg, rgba(0,122,255,.08), rgba(191,90,242,.08) 50%, rgba(90,200,250,.10));border:1px solid rgba(255,255,255,.65);padding:22px;border-radius:20px;box-shadow:var(--shadow-card)}
     button,input,select,textarea{font:inherit} input,select,textarea{border:1px solid var(--border-color);background:#fff;border-radius:var(--radius-btn);padding:12px 14px;width:100%}
-    button{border:none;border-radius:var(--radius-btn);padding:11px 14px;background:var(--color-info);color:white;font-weight:600;cursor:pointer;box-shadow:0 8px 18px rgba(0,122,255,.18);transition:.18s ease}
-    button:hover{transform:translateY(-1px)} button.secondary{background:#fff;color:var(--text-primary);border:1px solid var(--border-color);box-shadow:none}
+    button{border:none;border-radius:var(--radius-btn);padding:11px 14px;background:var(--color-info);color:white;font-weight:600;cursor:pointer;box-shadow:0 4px 14px rgba(0,102,255,.22);transition:transform .18s ease, box-shadow .18s ease, background .18s ease;position:relative;overflow:hidden}
+    button:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,102,255,.30)}
+    button:active{transform:scale(0.97)!important;transition:transform .1s ease}
+    button.secondary{background:#fff;color:var(--text-primary);border:1px solid var(--border-color);box-shadow:none}
+    button.secondary:hover{box-shadow:0 2px 8px rgba(0,0,0,.08);transform:translateY(-1px)}
+    button.secondary:active{transform:scale(0.97)!important}
+    button.ripple-effect::after{content:'';position:absolute;border-radius:50%;background:rgba(255,255,255,.4);width:100px;height:100px;margin-top:-50px;margin-left:-50px;top:var(--ripple-y,50%);left:var(--ripple-x,50%);transform:scale(0);animation:rippleAnim .5s linear;pointer-events:none}
+    @keyframes rippleAnim{to{transform:scale(4);opacity:0}}
     .grid-6,.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.grid-2,.two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
     .section-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px}.split{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
     .card{background:var(--bg-card);box-shadow:var(--shadow-card);border-radius:var(--radius-card);padding:18px;border:1px solid rgba(229,229,234,.9);position:relative;overflow:hidden}
-    .card.loading::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:translateX(-100%);animation:shimmer 1.8s infinite}
-    @keyframes shimmer{100%{transform:translateX(100%)}}
+    .card.loading::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-100%);animation:shimmer 1.6s ease infinite;z-index:1}
+    .card.loading{pointer-events:none}
+    @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
     .metric{min-height:172px;display:flex;flex-direction:column;justify-content:space-between}.metric::after{content:'';position:absolute;left:18px;right:18px;bottom:16px;height:8px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,.25),currentColor)}
     .metric.critical{background:linear-gradient(180deg, rgba(255,59,48,.12), rgba(255,255,255,.96) 65%);color:var(--color-critical)}
     .metric.good{background:linear-gradient(180deg, rgba(48,209,88,.14), rgba(255,255,255,.96) 65%);color:var(--color-good)}
@@ -65,6 +76,10 @@
     .badge{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;color:#fff}.green{background:var(--color-good)} .orange{background:var(--color-warning)} .red{background:var(--color-critical)} .blue{background:var(--color-info)} .yellow{background:var(--color-pink)}
     .soft{color:var(--text-secondary)} .stack{display:flex;flex-direction:column;gap:12px}
     .feed-item,.alert-item,.mini-card,.patient-card,.frame-card,.message-row,.bench-row{border:1px solid var(--border-color);border-radius:16px;padding:14px;background:#fff}
+    .patient-card{transition:transform .2s ease, box-shadow .2s ease;cursor:default}
+    .patient-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-card-hover)}
+    .card.metric{transition:transform .2s ease, box-shadow .2s ease}
+    .card.metric:hover{transform:translateY(-2px);box-shadow:var(--shadow-card-hover)}
     .table-wrap{overflow:auto;max-height:520px}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:12px;border-bottom:1px solid var(--border-color);text-align:left;font-size:13px;vertical-align:top}.table th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-secondary)}
     .filters{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:10px;margin-bottom:14px}.chart{display:flex;align-items:flex-end;gap:16px;height:220px;padding:14px 10px 4px}.bar{flex:1;display:flex;flex-direction:column;align-items:center;gap:8px}.bar-fill{width:100%;max-width:72px;border-radius:12px 12px 0 0;background:linear-gradient(180deg,#67b6ff,#007AFF)} .bar-label{font-size:12px;color:var(--text-secondary)}
     .list{margin:0;padding-left:18px}.prompt-pills{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}.pill{padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--border-color);font-size:12px;cursor:pointer}
@@ -86,6 +101,26 @@
     .ai-panel.open{transform:translateY(0);opacity:1;pointer-events:auto}.ai-head{padding:16px 18px;background:linear-gradient(135deg, rgba(0,122,255,.12), rgba(191,90,242,.12));border-bottom:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;font-weight:800}.ai-messages{flex:1;padding:14px;overflow:auto;background:#fafafd}.ai-bubble{max-width:86%;padding:11px 13px;border-radius:16px;margin-bottom:10px;line-height:1.45;font-size:14px}.ai-user{margin-left:auto;background:var(--color-info);color:#fff;border-bottom-right-radius:6px}.ai-bot{background:#f1f2f6;color:var(--text-primary);border-bottom-left-radius:6px}.ai-input{display:flex;gap:10px;padding:14px;border-top:1px solid var(--border-color);background:#fff}.ai-input input{flex:1}
     @keyframes botHighlight { from { background: rgba(0,122,255,0.1); box-shadow: 0 0 0 2px rgba(0,122,255,0.3); } to { background: rgba(0,122,255,0.25); box-shadow: 0 0 0 4px rgba(0,122,255,0.5); } }
     .nav-item.bot-highlight { animation: botHighlight 0.5s ease infinite alternate; border-radius: 8px; }
+    /* ── Toast Notification System ── */
+    #toast-container{position:fixed;top:20px;right:22px;z-index:99998;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+    .toast{display:flex;flex-direction:column;min-width:300px;max-width:380px;border-radius:16px;padding:14px 16px;box-shadow:0 8px 32px rgba(0,0,0,.16);color:#fff;font-size:14px;font-weight:500;pointer-events:auto;transform:translateX(120%);opacity:0;transition:transform .28s cubic-bezier(.34,1.56,.64,1), opacity .22s ease;position:relative;overflow:hidden}
+    .toast.toast-show{transform:translateX(0);opacity:1}
+    .toast.toast-hide{transform:translateX(120%);opacity:0;transition:transform .22s ease, opacity .18s ease}
+    .toast-success{background:linear-gradient(135deg,#059669,#10B981)}
+    .toast-warning{background:linear-gradient(135deg,#D97706,#F59E0B)}
+    .toast-info{background:linear-gradient(135deg,#0052CC,#0066FF)}
+    .toast-error{background:linear-gradient(135deg,#B91C1C,#EF4444)}
+    .toast-msg{line-height:1.4;margin-bottom:8px}
+    .toast-progress{position:absolute;bottom:0;left:0;height:3px;background:rgba(255,255,255,.45);border-radius:0 0 16px 16px;animation:toastProgress 3s linear forwards}
+    @keyframes toastProgress{from{width:100%}to{width:0%}}
+
+    /* ── Risk Score Critical Pulse ── */
+    .badge.risk-critical{animation:riskPulse 1.6s ease-in-out infinite}
+    @keyframes riskPulse{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.5)}50%{box-shadow:0 0 0 6px rgba(239,68,68,0)}}
+
+    /* ── Metric counter animation helper ── */
+    .metric .value[data-target]{display:block}
+
     @media (max-width:1280px){.grid-6,.metric-grid{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(2,1fr)} .grid-3,.section-grid,.split,.grid-2,.two-col,.care-tiles,.activity-panel{grid-template-columns:1fr} .filters{grid-template-columns:1fr 1fr} .footer{left:0} .app{grid-template-columns:1fr} .sidebar{position:relative;height:auto} }
     @media (max-width:768px){.sidebar{width:60px;padding:18px 10px}.sidebar .nav-label,.sidebar .nav-count{display:none}.main-content{margin-left:60px;padding:18px 18px 96px}.metric-grid,.grid-6{grid-template-columns:repeat(2,1fr)}.patient-table,.table{font-size:12px}.footer{left:60px}.brand{font-size:16px}.phone-screen{transform:scale(.42);margin-bottom:-432px}.tablet-screen{transform:scale(.45);margin-bottom:-228px}.ai-panel{width:min(92vw,380px);right:12px;bottom:90px}.ai-fab{right:12px;bottom:16px}}
     @media (max-width:480px){.metric-grid,.grid-6,.grid-4{grid-template-columns:1fr}.sidebar{display:none}.main-content{margin-left:0;padding-bottom:110px}.mobile-bottom-nav{display:flex}.footer{left:0}.filters{grid-template-columns:1fr}.phone-screen{transform:scale(.33);margin-bottom:-506px}.tablet-screen{transform:scale(.30);margin-bottom:-300px}.ai-fab span:last-child{display:none}}
@@ -157,6 +192,7 @@ window.addEventListener('DOMContentLoaded', function() {
   </main>
 </div>
 <div class="footer">Quantum Intelligence System | Apex Healthcare Advanced Medicine Division | Confidential</div>
+<div id="toast-container"></div>
 <button class="ai-fab" onclick="toggleAIPanel()"><span>🤖</span><span>Ask AI</span></button>
 <div id="ai-panel" class="ai-panel">
   <div class="ai-head"><span>🧠 QIS AI Navigator</span><button class="secondary" style="padding:8px 10px" onclick="toggleAIPanel(false)">Close</button></div>
@@ -333,12 +369,13 @@ function qisDashboardRiskTable(p) {
 function patientById(id){return mockPatients.find(p=>p.id===id) || mockPatients[0];}
 function daysSince(d){return Math.floor((new Date('2026-03-14') - new Date(d))/(1000*60*60*24));}
 function riskClass(score){return score>=85?'red':score>=70?'orange':score>=50?'blue':'green';}
+function riskBadgeClass(score){return score>=75?`${riskClass(score)} risk-critical`:`${riskClass(score)}`;}
 function riskLabel(score){return score>=85?'Critical':score>=70?'High':score>=50?'Moderate':'Low';}
 function fmtCurrency(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n)}
 function diagnosisText(p){return p.primaryDiagnoses.map(d=>`${d.code} ${d.label}`).join(', ')}
 function topRiskPatients(){return [...mockPatients].sort((a,b)=>b.rehospitalizationRisk-a.rehospitalizationRisk)}
 function buildHeader(title, subtitle, right=''){return `<div class="page-header"><div class="topbar"><div><h1 class="title">${title}</h1><p class="subtitle">${subtitle}</p></div><div class="right-stat">${right}</div></div></div>`}
-function metricCard(k,v,d,c='blue',icon='●'){const tone = c==='red'?'critical':c==='green'?'good':c==='orange'?'warning':'info'; return `<div class="card metric ${tone} loading"><div class="metric-top"><div><div class="value">${v}</div><div class="kicker">${k}</div></div><div class="metric-icon">${icon}</div></div><div class="delta"><span class="badge ${c}">${d}</span></div></div>`}
+function metricCard(k,v,d,c='blue',icon='●'){const tone = c==='red'?'critical':c==='green'?'good':c==='orange'?'warning':'info'; return `<div class="card metric ${tone} loading"><div class="metric-top"><div><div class="value" data-target="${v}">${v}</div><div class="kicker">${k}</div></div><div class="metric-icon">${icon}</div></div><div class="delta"><span class="badge ${c}">${d}</span></div></div>`}
 function alertReason(p){const reasons=[]; if(p.recentVitals.o2<92) reasons.push(`O₂ trending low at ${p.recentVitals.o2}%`); if(p.recentLabs.bmp.creatinine>1.6) reasons.push(`renal stress with creatinine ${p.recentLabs.bmp.creatinine}`); if(p.recentLabs.cbc.wbc>11) reasons.push(`leukocytosis ${p.recentLabs.cbc.wbc}`); if(p.recentInfections.length) reasons.push(`recent ${p.recentInfections.join(', ')}`); if(p.fallRiskScore>55) reasons.push(`high fall risk ${p.fallRiskScore}`); if(p.lastHospitalizationDate) reasons.push(`recent hospitalization ${daysSince(p.lastHospitalizationDate)} days ago`); return reasons.slice(0,3).join(' • ') || 'multifactor decline requiring close review';}
 function surveyReadiness(){return Math.max(72, 100 - mockPatients.filter(p=>p.pressureInjuryStatus!=='None').length - mockPatients.filter(p=>p.recentInfections.length).length)}
 function billingOpportunity(p){return (p.ccmMissing?380:0) + (p.therapyMinutesGap>20 ? p.therapyMinutesGap*8 : 0) + (p.projectedRate<700 ? 220 : 90)}
@@ -346,18 +383,132 @@ function buildRiskTierCounts(){return {Low: mockPatients.filter(p=>p.rehospitali
 function familyNotes(p){return p.recentNotes.map(n=>n.replace('Provider note: ','').replace('Nursing reports ','').replace('Therapy note: ','')).map(n=>n.replace('renal function','kidney labs').replace('oxygen trend','breathing levels').replace('higher assist needs','extra help during movement'));}
 function getVitalsSparkValues(p){const o=p.recentVitals.o2; const hr=p.recentVitals.hr; const wt=p.recentVitals.weight; return {bp:[42,48,45,52,50,56,54], o2:[o-2,o-1,o,o-1,o,o+1,o], hr:[hr-8,hr-5,hr-2,hr,hr-4,hr-1,hr], wt:[wt+1.2,wt+0.9,wt+0.5,wt,wt-0.2,wt-0.4,wt]};}
 function spark(values,max){return `<div class="sparkline">${values.map(v=>`<span style="height:${Math.max(10, (v/max)*42)}px"></span>`).join('')}</div>`;}
-function init(){renderNav(); renderAllPages(); initAI(); setTimeout(()=>document.querySelectorAll('.loading').forEach(el=>el.classList.remove('loading')), 900);}
+function showToast(message, type='info'){
+  const container=document.getElementById('toast-container');
+  if(!container) return;
+  const toast=document.createElement('div');
+  const typeClass={success:'toast-success',warning:'toast-warning',info:'toast-info',error:'toast-error'}[type]||'toast-info';
+  toast.className=`toast ${typeClass}`;
+  toast.innerHTML=`<div class="toast-msg">${message}</div><div class="toast-progress"></div>`;
+  container.appendChild(toast);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>toast.classList.add('toast-show')));
+  setTimeout(()=>{
+    toast.classList.add('toast-hide');
+    setTimeout(()=>toast.remove(), 250);
+  }, 3000);
+}
+
+function animateCounter(el, target, duration=600){
+  const isFloat=String(target).includes('.');
+  const decimals=isFloat?String(target).split('.')[1].length:0;
+  const start=performance.now();
+  const from=0;
+  function step(now){
+    const elapsed=now-start;
+    const progress=Math.min(elapsed/duration,1);
+    const eased=1-Math.pow(1-progress,3);
+    const current=from+(parseFloat(target)-from)*eased;
+    el.textContent=isFloat?current.toFixed(decimals):Math.round(current);
+    if(progress<1) requestAnimationFrame(step);
+    else el.textContent=target;
+  }
+  requestAnimationFrame(step);
+}
+
+function animateMetricCards(){
+  document.querySelectorAll('.metric .value').forEach(el=>{
+    const raw=el.textContent.replace(/[$,%]/g,'').trim();
+    const num=parseFloat(raw);
+    if(!isNaN(num) && raw.length < 10){
+      const prefix=el.textContent.startsWith('$')?'$':'';
+      const suffix=el.textContent.endsWith('%')?'%':'';
+      el.textContent=prefix+'0'+suffix;
+      const target=isNaN(num)?raw:num;
+      animateCounter({set textContent(v){el.textContent=prefix+v+suffix;}},target,600);
+    }
+  });
+}
+
+function addRipple(btn, e){
+  const rect=btn.getBoundingClientRect();
+  btn.style.setProperty('--ripple-x',(e.clientX-rect.left)+'px');
+  btn.style.setProperty('--ripple-y',(e.clientY-rect.top)+'px');
+  btn.classList.remove('ripple-effect');
+  void btn.offsetWidth;
+  btn.classList.add('ripple-effect');
+}
+
+function initButtonRipples(){
+  document.addEventListener('click',function(e){
+    const btn=e.target.closest('button:not(.secondary)');
+    if(btn) addRipple(btn, e);
+  });
+}
+
+function typewriterEffect(el, text, speed=10){
+  el.textContent='';
+  let i=0;
+  function tick(){
+    if(i<text.length){el.textContent+=text[i++]; setTimeout(tick,speed);}
+  }
+  tick();
+}
+
+function init(){renderNav(); renderAllPages(); initAI(); initButtonRipples();
+  setTimeout(()=>{
+    document.querySelectorAll('.loading').forEach(el=>el.classList.remove('loading'));
+    animateMetricCards();
+  }, 800);
+}
 function navBadgeCount(id){const counts={critical:mockPatients.filter(p=>p.rehospitalizationRisk>=85).length,alerts:alertFeed.length,rounding:roundingList.length||5,billing:mockPatients.filter(p=>p.ccmMissing).length,ftag:3,risk:mockPatients.filter(p=>p.rehospitalizationRisk>=70).length}; return counts[id]||'';}
 function renderNav(){document.getElementById('nav').innerHTML = navItems.map(([id,label])=>{const parts=label.split(' '); const count=navBadgeCount(id); return `<div class="nav-item ${id===currentPage?'active':''}" data-page="${id}" onclick="showPage('${id}')"><div class="nav-text"><span class="nav-icon">${parts[0]}</span><span class="nav-label">${parts.slice(1).join(' ')}</span></div>${count?`<span class="nav-count">${count}</span>`:''}</div>`;}).join('');}
-function showPage(id){currentPage=id; document.querySelectorAll('.page').forEach(p=>p.classList.remove('active')); const target=document.getElementById(`page-${id}`); if(target) target.classList.add('active'); renderNav(); resetAIIdleTimer();}
+function showPage(id){
+  const prev=document.getElementById(`page-${currentPage}`);
+  currentPage=id;
+  const hadActive=prev && prev.classList.contains('active');
+  if(hadActive){
+    prev.classList.add('page-exit');
+    setTimeout(()=>{prev.classList.remove('active','page-exit');},100);
+  } else {
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  }
+  const target=document.getElementById(`page-${id}`);
+  if(target){
+    const delay=hadActive?110:0;
+    setTimeout(()=>{
+      // Apply skeleton shimmer on each panel load for 800ms
+      target.querySelectorAll('.card.metric').forEach(c=>c.classList.add('loading'));
+      target.classList.add('active','page-enter');
+      setTimeout(()=>target.classList.remove('page-enter'),220);
+      setTimeout(()=>{
+        target.querySelectorAll('.loading').forEach(el=>el.classList.remove('loading'));
+        animateMetricCards();
+      },800);
+    },delay);
+  }
+  renderNav(); resetAIIdleTimer();
+}
 function renderAllPages(){renderDashboard(); renderCensus(); renderCritical(); renderRisk(); renderCopilot(); renderRounding(); renderMDS(); renderBilling(); renderRiskMgmt(); renderAdmin(); renderNursing(); renderFtag(); renderFamily(); renderMobile(); renderAlerts(); renderHandoff(); renderBenchmark(); renderDeprescribing(); renderSettings();}
 function renderDashboard(){const critical=mockPatients.filter(p=>p.rehospitalizationRisk>=85).length; const high=mockPatients.filter(p=>p.rehospitalizationRisk>=70).length; const pendingMDS=mockPatients.filter(p=>daysSince(p.mdsAssessmentDates.lastCompleted)>14 || new Date(p.mdsAssessmentDates.ard)<=new Date('2026-03-21')).length; const totalOpp=mockPatients.reduce((s,p)=>s+billingOpportunity(p),0); const alerts=topRiskPatients().slice(0,5); const top10=topRiskPatients().slice(0,10); const rings = `<div class="card" style="margin-top:16px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><div><h3 style="margin:0">Clinical Activity Rings</h3><div class="soft">Apple Health-style completion signals for today's command center.</div></div><div class="badge blue">Live operational closure</div></div><div class="activity-panel" style="margin-top:16px">${activityRing('Daily Rounds Completion','14/20',70,'#FF3B30','14 complete')}${activityRing('Documentation Rate','87%',87,'#30D158','Provider notes closed')}${activityRing('Alert Response Rate','92%',92,'#007AFF','Acknowledged within SLA')}</div></div>`; document.getElementById('page-dashboard').innerHTML = buildHeader('Good morning, Dr. Rizqui — Complete Care Multi-Medical Center','Enterprise facility command center across medical director, nursing, MDS, billing, survey risk, family engagement, and medication stewardship.', `<select><option>Complete Care Multi-Medical Center</option><option>Apex North SNF</option><option>Harbor Rehab & Nursing</option></select>`) + `<div class="grid-6 metric-grid">${metricCard('Total Patients',mockPatients.length,'Live census','green','👥')}${metricCard('Critical Alerts',critical,`${critical} immediate review`,'red','🚨')}${metricCard('High Rehospitalization Risk',high,`${high} above threshold`,'orange','📈')}${metricCard('Pending MDS Assessments',pendingMDS,'ARDs this week','blue','📋')}${metricCard('Billing Opportunities',fmtCurrency(totalOpp),'recovery potential','green','💰')}${metricCard('Survey Readiness Score',surveyReadiness()+'%','risk-adjusted','blue','🛡️')}</div>` + rings + `<div class="section-grid" style="margin-top:16px"><div class="card"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><h3 style="margin:0">Top 10 High-Risk Patients</h3><span class="soft">Scroll for full list</span></div><div class="table-wrap" style="margin-top:12px"><table class="table patient-table"><thead><tr><th>Name</th><th>Room</th><th>Risk</th><th>Primary Concern</th><th></th></tr></thead><tbody>${top10.map(p=>`<tr><td><strong>${p.name}</strong></td><td>${p.room}</td><td><span class="badge ${riskClass(p.rehospitalizationRisk)}">${p.rehospitalizationRisk}</span></td><td><div style="margin-bottom:6px"><span class="badge ${riskClass(p.rehospitalizationRisk)}">Risk ${p.rehospitalizationRisk}</span></div><div>${qisDashboardRiskTable(p)}</div></td><td><button onclick="openPatientModal('${p.id}')">Open</button></td></tr>`).join('')}</tbody></table></div></div><div class="card"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><h3 style="margin:0">Recent Critical Alerts</h3><span class="soft">Newest first</span></div><div class="stack" style="margin-top:12px;max-height:520px;overflow:auto">${alerts.map(p=>`<div class="feed-item"><div style="display:flex;justify-content:space-between;gap:8px"><strong>${p.name}</strong><span class="badge ${riskClass(p.rehospitalizationRisk)}">Risk ${p.rehospitalizationRisk}</span></div><div class="soft" style="margin-top:6px">Room ${p.room} • ${p.attendingPhysician}</div><div style="margin-top:8px">${alertReason(p)}</div></div>`).join('')}</div></div></div>`;}
 function renderCensus(){document.getElementById('page-census').innerHTML = buildHeader('Patient Census','Risk-stratified census with physician, payer, and unit filters.') + `<div class="filters"><input id="searchInput" placeholder="Search patient, room, diagnosis" oninput="filterCensus()"><select id="riskFilter" onchange="filterCensus()"><option value="">All Risk Levels</option><option>Low</option><option>Moderate</option><option>High</option><option>Critical</option></select><select id="insuranceFilter" onchange="filterCensus()"><option value="">All Insurance</option>${[...new Set(mockPatients.map(p=>p.insuranceType))].map(v=>`<option>${v}</option>`).join('')}</select><select id="attendingFilter" onchange="filterCensus()"><option value="">All Attending</option>${[...new Set(mockPatients.map(p=>p.attendingPhysician))].map(v=>`<option>${v}</option>`).join('')}</select><select id="unitFilter" onchange="filterCensus()"><option value="">All Units</option>${[...new Set(mockPatients.map(p=>p.unit))].map(v=>`<option>${v}</option>`).join('')}</select></div><div class="card table-wrap"><table class="table patient-table"><thead><tr><th>Room</th><th>Patient</th><th>Age</th><th>Diagnoses</th><th>Risk</th><th>Fall Risk</th><th>Days</th><th>Insurance</th><th>Attending</th><th>Status</th></tr></thead><tbody id="censusRows"></tbody></table></div>`; filterCensus();}
 function filterCensus(){const s=(document.getElementById('searchInput')||{value:''}).value.toLowerCase(); const rf=(document.getElementById('riskFilter')||{value:''}).value; const ins=(document.getElementById('insuranceFilter')||{value:''}).value; const att=(document.getElementById('attendingFilter')||{value:''}).value; const unit=(document.getElementById('unitFilter')||{value:''}).value; const rows=mockPatients.filter(p=>{const q = `${p.name} ${p.room} ${diagnosisText(p)}`.toLowerCase().includes(s); const r = !rf || riskLabel(p.rehospitalizationRisk)===rf; const i=!ins || p.insuranceType===ins; const a=!att || p.attendingPhysician===att; const u=!unit || p.unit===unit; return q&&r&&i&&a&&u;}).map(p=>`<tr onclick="openPatientModal('${p.id}')" style="cursor:pointer"><td>${p.room}</td><td><strong>${p.name}</strong><div class="soft">${p.unit}</div></td><td>${p.age}</td><td>${diagnosisText(p)}</td><td><span class="badge ${riskClass(p.rehospitalizationRisk)}">${p.rehospitalizationRisk} ${riskLabel(p.rehospitalizationRisk)}</span></td><td>${p.fallRiskScore}</td><td>${daysSince(p.admissionDate)}</td><td>${p.insuranceType}</td><td>${p.attendingPhysician}</td><td>${p.status}</td></tr>`).join(''); document.getElementById('censusRows').innerHTML = rows;}
-function renderCritical(){const pts=mockPatients.filter(p=>p.rehospitalizationRisk>75); document.getElementById('page-critical').innerHTML = buildHeader('Critical Patients','Patients requiring same-day clinical intervention and rapid disposition planning.') + `<div class="stack">${pts.map(p=>`<div class="card patient-card"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><h3 style="margin:0">${p.name} <span class="badge ${riskClass(p.rehospitalizationRisk)}">Risk ${p.rehospitalizationRisk}</span></h3><div class="soft">Room ${p.room} • ${p.attendingPhysician} • ${p.insuranceType}</div></div><div class="inline-actions"><button class="secondary" onclick="addToRounding('${p.id}')">Add to Rounding List</button><button onclick="generateSBAR('${p.id}')">Generate SBAR</button></div></div><div style="margin-top:16px">${qisClinicalIntelligence(p)}</div></div>`).join('')}</div>`;}
+function renderCritical(){const pts=mockPatients.filter(p=>p.rehospitalizationRisk>75); document.getElementById('page-critical').innerHTML = buildHeader('Critical Patients','Patients requiring same-day clinical intervention and rapid disposition planning.') + `<div class="stack">${pts.map(p=>`<div class="card patient-card"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><h3 style="margin:0">${p.name} <span class="badge ${riskBadgeClass(p.rehospitalizationRisk)}">Risk ${p.rehospitalizationRisk}</span></h3><div class="soft">Room ${p.room} • ${p.attendingPhysician} • ${p.insuranceType}</div></div><div class="inline-actions"><button class="secondary" onclick="addToRounding('${p.id}')">Add to Rounding List</button><button onclick="generateSBAR('${p.id}')">Generate SBAR</button></div></div><div style="margin-top:16px">${qisClinicalIntelligence(p)}</div></div>`).join('')}</div>`;}
 function renderRisk(){const tiers=buildRiskTierCounts(); const bars = Object.entries(tiers).map(([label,val])=>`<div class="bar"><div>${val}</div><div class="bar-fill" style="height:${40+val*18}px;background:${label==='Critical'?'linear-gradient(180deg,#ff958f,#FF3B30)':label==='High'?'linear-gradient(180deg,#ffd089,#FF9F0A)':label==='Moderate'?'linear-gradient(180deg,#96cdfd,#0071E3)':'linear-gradient(180deg,#90e5aa,#34C759)'}"></div><div class="bar-label">${label}</div></div>`).join(''); const focus=topRiskPatients().slice(0,6); document.getElementById('page-risk').innerHTML = buildHeader('Rehospitalization Risk','Tiering, trend review, and targeted interventions before the patient leaves the building.') + `<div class="split"><div class="card"><h3>Patients by Risk Tier</h3><div class="chart">${bars}</div></div><div class="card"><h3>Intervention Playbook</h3><div class="stack"><div class="mini-card"><strong>Critical</strong><div class="soft">Same-day provider review, nursing alert, medication reconciliation, hydration/infection review.</div></div><div class="mini-card"><strong>High</strong><div class="soft">Targeted rounding within 24 hours, fall precautions, labs trending, family update.</div></div><div class="mini-card"><strong>Moderate</strong><div class="soft">Weekly review, therapy monitoring, ensure care plan alignment.</div></div></div></div></div><div class="stack" style="margin-top:16px">${focus.map(p=>`<div class="card"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><h3 style="margin:0">${p.name}</h3><div class="soft">${p.room} • ${p.attendingPhysician}</div></div><div><span class="badge ${riskClass(p.rehospitalizationRisk)}">Overall risk ${p.rehospitalizationRisk}</span></div></div><div style="margin-top:16px">${qisClinicalIntelligence(p)}</div></div>`).join('')}</div>`;}
 function renderCopilot(){const p=patientById(currentPatientId); document.getElementById('page-copilot').innerHTML = buildHeader('Medical Director Copilot','Chart Chat for fast patient synthesis, trend review, and provider-ready briefs.') + `<div class="split"><div class="card"><div class="inline-actions"><select id="copilotPatient" onchange="currentPatientId=this.value; renderCopilot()">${mockPatients.map(x=>`<option value="${x.id}" ${x.id===p.id?'selected':''}>${x.name} — ${x.room}</option>`).join('')}</select><button class="secondary" onclick="generateProviderBrief()">New Provider Brief</button><button class="secondary" onclick="generateProgressNote()">Generate Progress Note</button><button onclick="flagCurrentForRounding()">Flag for Rounding</button></div><div class="prompt-pills"><div class="pill" onclick="setPrompt('When was the last echo?')">When was the last echo?</div><div class="pill" onclick="setPrompt('What is the kidney function trend?')">Kidney function trend</div><div class="pill" onclick="setPrompt('Summarize the last 30 days')">Summarize 30 days</div><div class="pill" onclick="setPrompt('Is there a transfer risk?')">Transfer risk</div></div><div id="copilotChat" class="chat-box"><div class="msg bot">Ready. Ask anything about ${p.name}. I can summarize hospitalizations, infections, kidney trend, fall risk, and overall trajectory.</div></div><div style="display:flex;gap:10px;margin-top:12px"><input id="copilotInput" style="flex:1" placeholder="Ask anything about this patient"><button onclick="askCopilot()">Ask</button></div></div><div class="card"><h3>Patient Timeline</h3><div class="stack">${p.events.map(e=>`<div class="feed-item"><strong>${e.date}</strong><div class="soft">${e.type}</div><div>${e.summary}</div></div>`).join('')}</div></div></div>`;}
-function askCopilot(){const p=patientById((document.getElementById('copilotPatient')||{value:currentPatientId}).value); const q=document.getElementById('copilotInput').value || 'Summarize current trajectory'; const box=document.getElementById('copilotChat'); box.innerHTML += `<div class="msg user">${q}</div>`; box.innerHTML += `<div class="msg bot"><strong>${p.name}</strong>: Risk ${p.rehospitalizationRisk} (${riskLabel(p.rehospitalizationRisk)}). Main issues: ${alertReason(p)}. Recent tests: CXR ${p.recentTests.cxr||'not on file'}, EKG ${p.recentTests.ekg||'not on file'}, echo ${p.recentTests.echo||'not on file'}. Recommendation: review medication burden, confirm labs, and align discharge/transfer plan.</div>`; box.scrollTop=box.scrollHeight; document.getElementById('copilotInput').value='';}
+function askCopilot(){
+  const p=patientById((document.getElementById('copilotPatient')||{value:currentPatientId}).value);
+  const q=document.getElementById('copilotInput').value || 'Summarize current trajectory';
+  const box=document.getElementById('copilotChat');
+  box.innerHTML += `<div class="msg user">${q}</div>`;
+  const botEl=document.createElement('div');
+  botEl.className='msg bot';
+  box.appendChild(botEl);
+  box.scrollTop=box.scrollHeight;
+  const responseText=`${p.name}: Risk ${p.rehospitalizationRisk} (${riskLabel(p.rehospitalizationRisk)}). Main issues: ${alertReason(p)}. Recent tests: CXR ${p.recentTests.cxr||'not on file'}, EKG ${p.recentTests.ekg||'not on file'}, echo ${p.recentTests.echo||'not on file'}. Recommendation: review medication burden, confirm labs, and align discharge/transfer plan.`;
+  typewriterEffect(botEl, responseText, 10);
+  setTimeout(()=>box.scrollTop=box.scrollHeight, 50);
+  document.getElementById('copilotInput').value='';
+}
 function setPrompt(t){document.getElementById('copilotInput').value=t;}
 function renderRounding(){document.getElementById('page-rounding').innerHTML = buildHeader('Strategic Rounding','Build a focused list for one-thumb mobile rounding and physician review.', `<button onclick="roundingList=[]; renderRounding()" class="secondary">Clear List</button>`) + `<div class="grid-4 metric-grid">${metricCard('Patients Queued',roundingList.length,'rounded today','blue')}${metricCard('Avg Time Saved','28 min','vs manual prep','green')}${metricCard('Critical Patients Added',roundingList.filter(id=>patientById(id).rehospitalizationRisk>=85).length,'highest priority','red')}${metricCard('Family Follow-ups',3,'portal call requests pending','orange')}</div><div class="stack" style="margin-top:16px">${(roundingList.length?roundingList:topRiskPatients().slice(0,5).map(p=>p.id)).map(id=>{const p=patientById(id); return `<div class="card"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div><strong>${p.name}</strong><div class="soft">${p.room} • ${p.attendingPhysician}</div></div><span class="badge ${riskClass(p.rehospitalizationRisk)}">${riskLabel(p.rehospitalizationRisk)}</span></div><div style="margin-top:8px">${alertReason(p)}</div><div class="inline-actions" style="margin-top:12px"><button onclick="openPatientModal('${p.id}')">Open Chart Summary</button><button class="secondary" onclick="generateSBAR('${p.id}')">Generate SBAR</button></div></div>`;}).join('')}</div>`;}
 function renderMDS(){const due=mockPatients.filter(p=>new Date(p.mdsAssessmentDates.nextDue)<=new Date('2026-03-27')); document.getElementById('page-mds').innerHTML = buildHeader('MDS Automation','ARD timing, completion risk, and reimbursement protection.') + `<div class="grid-4 metric-grid">${metricCard('Assessments Due',due.length,'next 14 days','orange')}${metricCard('Late-Risk Charts',mockPatients.filter(p=>daysSince(p.mdsAssessmentDates.lastCompleted)>20).length,'needs review','red')}${metricCard('Expected Capture',fmtCurrency(12680),'PDPM recovery','green')}${metricCard('Medicare Day 20+',mockPatients.filter(p=>p.medicareBenefitDay>=20).length,'coverage watch','blue')}</div><div class="card" style="margin-top:16px"><table class="table"><thead><tr><th>Patient</th><th>Last Completed</th><th>ARD</th><th>Next Due</th><th>Medicare Day</th><th>Action</th></tr></thead><tbody>${due.map(p=>`<tr><td><strong>${p.name}</strong><div class="soft">${p.room}</div></td><td>${p.mdsAssessmentDates.lastCompleted}</td><td>${p.mdsAssessmentDates.ard}</td><td>${p.mdsAssessmentDates.nextDue}</td><td>${p.medicareBenefitDay}</td><td><button class="secondary">Prep</button></td></tr>`).join('')}</tbody></table></div>`;}
@@ -375,16 +526,12 @@ function renderDeprescribing(){const cards = [{id:'QIS-1004', flags:['Omeprazole
 function renderSettings(){document.getElementById('page-settings').innerHTML = buildHeader('Settings','Facility preferences, routing defaults, and access controls.') + `<div class="grid-2"><div class="card"><h3>Notification Defaults</h3><div class="stack"><div class="toggle"><span>Push notifications</span><div class="switch on"></div></div><div class="toggle"><span>SMS for critical alerts</span><div class="switch on"></div></div><div class="toggle"><span>Family portal enabled by default</span><div class="switch"></div></div></div></div><div class="card"><h3>Access Control</h3><div class="stack"><div class="feed-item">Medical director — full access</div><div class="feed-item">Nursing leadership — operational + alert configuration</div><div class="feed-item">Family — read-only approved view only</div></div></div></div>`;}
 function openPatientModal(id){const p=patientById(id); document.getElementById('modal-title').innerHTML = `<strong>${p.name}</strong><div class="soft">${p.room} • ${p.unit} • ${p.attendingPhysician}</div>`; document.getElementById('modal-body').innerHTML = qisClinicalIntelligence(p) + `<div class="grid-3"><div class="mini-card"><strong>Diagnoses</strong><ul class="list">${p.primaryDiagnoses.map(d=>`<li>${d.label}</li>`).join('')}</ul></div><div class="mini-card"><strong>Vitals</strong><ul class="list"><li>BP ${p.recentVitals.bp}</li><li>HR ${p.recentVitals.hr}</li><li>Temp ${p.recentVitals.temp}</li><li>O₂ ${p.recentVitals.o2}%</li></ul></div><div class="mini-card"><strong>Labs</strong><ul class="list"><li>BUN ${p.recentLabs.bmp.bun}</li><li>Cr ${p.recentLabs.bmp.creatinine}</li><li>WBC ${p.recentLabs.cbc.wbc}</li><li>Glucose ${p.recentLabs.bmp.glucose}</li></ul></div><div class="mini-card"><strong>Medications</strong><ul class="list">${p.medications.map(m=>`<li>${m}</li>`).join('')}</ul></div><div class="mini-card"><strong>Recent Notes</strong><ul class="list">${p.recentNotes.map(n=>`<li>${n}</li>`).join('')}</ul></div><div class="mini-card"><strong>Events</strong><ul class="list">${p.events.map(e=>`<li>${e.date} — ${e.summary}</li>`).join('')}</ul></div></div>`; document.getElementById('patient-modal').classList.add('open');}
 function closeModal(){document.getElementById('patient-modal').classList.remove('open');}
-function addToRounding(id){if(!roundingList.includes(id)) roundingList.push(id); renderRounding(); showPage('rounding');}
+function addToRounding(id){const p=patientById(id); if(!roundingList.includes(id)){roundingList.push(id); showToast(`${p.name} added to rounding list.`,'success');} renderRounding(); showPage('rounding');}
 function flagCurrentForRounding(){addToRounding((document.getElementById('copilotPatient')||{value:currentPatientId}).value);}
-function generateSBAR(id){const p=patientById(id); alert(`SBAR drafted for ${p.name}:
-Situation: ${alertReason(p)}
-Background: ${diagnosisText(p)}
-Assessment: Risk ${p.rehospitalizationRisk}
-Recommendation: same-day review and med/lab reconciliation.`);}
-function sendAlertToNursing(id){const p=patientById(id); alert(`Alert routed to nursing for ${p.name}.`);}
-function generateProviderBrief(){alert('Provider brief generated in Chart Chat.');}
-function generateProgressNote(){alert('Progress note draft created for physician review.');}
+function generateSBAR(id){const p=patientById(id); showToast(`SBAR drafted for ${p.name} — Situation: ${alertReason(p).split(' • ')[0]}. Risk ${p.rehospitalizationRisk}. Review and sign.`,'info');}
+function sendAlertToNursing(id){const p=patientById(id); showToast(`Alert routed to nursing for ${p.name}.`,'warning');}
+function generateProviderBrief(){showToast('Provider brief generated in Chart Chat.','success');}
+function generateProgressNote(){showToast('Progress note draft created for physician review.','success');}
 
 function activityRing(label, value, percent, color, sub){const circumference=339.292; const offset=circumference-(circumference*percent/100); return `<div class="ring-card"><div class="ring-wrap"><svg viewBox="0 0 140 140" aria-label="${label}"><circle class="ring-bg" cx="70" cy="70" r="54"></circle><circle class="ring-progress" cx="70" cy="70" r="54" style="stroke:${color};--offset:${offset}"></circle></svg><div class="ring-center"><strong>${value}</strong><span class="soft">${percent}%</span></div></div><div class="ring-label">${label}</div><div class="ring-sub">${sub}</div></div>`;}
 function normalizeText(t){return String(t||'').toLowerCase().trim();}

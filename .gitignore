@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Node.js scaffold (not used in production)
+package.json
+package-lock.json
+next.config.mjs
+postcss.config.mjs
+tailwind.config.ts
+tsconfig.json

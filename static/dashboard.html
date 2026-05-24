@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Quantum Intelligence System (QIS)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- LEFT SIDEBAR -->
+    <nav class="sidebar">
+        <div class="brand">
+            <span class="brand-icon">🧬</span>
+            <div class="brand-text">
+                <h2>Apex Clinical</h2>
+                <p>AI-Powered Clinical Command Center</p>
+            </div>
+        </div>
+
+        <div class="facility-selector">
+            <select class="facility-select" id="facilitySelect">
+                <option value="">All facilities</option>
+            </select>
+        </div>
+
+        <div class="nav-section-label">Operations</div>
+        <ul class="nav-menu">
+            <li><button class="nav-item active" data-view="census">🏠 Census Overview</button></li>
+            <li><button class="nav-item" data-view="ai">🧠 AI Insights</button></li>
+            <li><button class="nav-item" data-view="risk">⚠️ Risk Flags</button></li>
+            <li><button class="nav-item" data-view="careplans">📋 Care Plans</button></li>
+            <li><button class="nav-item" data-view="meds">💊 Medications</button></li>
+            <li><button class="nav-item" data-view="quality">📊 Quality Metrics</button></li>
+        </ul>
+
+        <div class="nav-section-label">Facilities</div>
+        <ul class="nav-menu" id="facilityNavList"></ul>
+
+        <div class="facility-stats" id="sidebarStats">
+            <div class="stats-label">Roster snapshot</div>
+            <div class="stat-line"><span class="text-muted">Census</span><span class="font-semibold" id="statCensus">—</span></div>
+            <div class="stat-line"><span class="text-muted">Critical</span><span class="font-semibold" id="statCritical" style="color: var(--red)">—</span></div>
+            <div class="stat-line"><span class="text-muted">Avg MD visit</span><span class="font-semibold" id="statMD">—</span></div>
+            <div class="stat-line"><span class="text-muted">Data source</span><span class="font-semibold" id="statSource">mock</span></div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="topbar">
+            <div class="page-title">
+                <h1 id="pageTitle">Census Overview</h1>
+                <p id="pageSubtitle">Updated <span id="pageUpdated">just now</span></p>
+            </div>
+            <div class="actions">
+                <span class="user-pill" id="userPill">—</span>
+                <button class="btn btn-ghost btn-sm" id="refreshBtn">↻ Refresh</button>
+                <button class="btn btn-ghost btn-sm" id="signoutBtn">Sign out</button>
+            </div>
+        </div>
+
+        <!-- =================== CENSUS / MAIN VIEW =================== -->
+        <section id="view-census" class="view">
+            <div class="top-metrics">
+                <div class="metric-card">
+                    <div class="metric-header"><span>Active Patients</span><span style="color: var(--indigo)">👥</span></div>
+                    <div class="metric-value" id="mActive">—</div>
+                    <div class="metric-trend trend-muted">Across selected facilities</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header"><span>Critical Risk</span><span style="color: var(--red)">⚠️</span></div>
+                    <div class="metric-value" id="mCritical">—</div>
+                    <div class="metric-trend trend-danger">Composite ≥ 60</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header"><span>High Risk</span><span style="color: var(--amber)">🟡</span></div>
+                    <div class="metric-value" id="mHigh">—</div>
+                    <div class="metric-trend trend-warning">Composite 40–59</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-header"><span>Readmit Window</span><span style="color: var(--indigo)">🏥</span></div>
+                    <div class="metric-value" id="mReadmit">—</div>
+                    <div class="metric-trend trend-muted" id="mMDvisit">—</div>
+                </div>
+            </div>
+
+            <section>
+                <div class="section-header">
+                    <div>
+                        <h3>Patient Radar — 10-Domain Risk Stratification</h3>
+                        <p>Sorted by composite score · click row for full workup</p>
+                    </div>
+                    <span class="badge badge-indigo" id="triageCount">—</span>
+                </div>
+                <div class="table-card">
+                    <table>
+                        <thead><tr>
+                            <th>Room</th>
+                            <th>Patient</th>
+                            <th>Primary Dx</th>
+                            <th>Risk</th>
+                            <th>Top Flags</th>
+                            <th>MD</th>
+                            <th class="payer-cell">Payer</th>
+                            <th>Action</th>
+                        </tr></thead>
+                        <tbody id="triageBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="section-header" style="margin-bottom: 12px;"><h3>Facility Risk Distribution</h3></div>
+                        <div id="facilityBars" class="bar-chart"></div>
+                    </div>
+                    <div class="card">
+                        <div class="section-header" style="margin-bottom: 12px;"><h3>Quality Metrics — This Quarter</h3></div>
+                        <div class="bar-chart">
+                            <div class="bar-row"><div class="bar-label"><span>Falls rate (per 1000 pt-days) — 2.1</span><span class="text-muted">Target &lt; 2.0</span></div><div class="bar-track"><div class="bar-fill" style="width: 95%; background-color: var(--amber);"></div></div></div>
+                            <div class="bar-row"><div class="bar-label"><span>Rehospitalization rate — 12.3%</span><span class="text-muted">Target &lt; 15%</span></div><div class="bar-track"><div class="bar-fill" style="width: 78%; background-color: var(--green);"></div></div></div>
+                            <div class="bar-row"><div class="bar-label"><span>Pressure ulcer incidence — 1.6%</span><span class="text-muted">Target &lt; 2.0%</span></div><div class="bar-track"><div class="bar-fill" style="width: 88%; background-color: var(--green);"></div></div></div>
+                            <div class="bar-row"><div class="bar-label"><span>Antipsychotic use — 14.8%</span><span class="text-muted">Target &lt; 20%</span></div><div class="bar-track"><div class="bar-fill" style="width: 74%; background-color: var(--green);"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- =================== AI INSIGHTS VIEW =================== -->
+        <section id="view-ai" class="view" style="display:none;">
+            <div class="section-header"><div><h3>Priority Patients</h3><p>Highest composite scores across selected facilities</p></div></div>
+            <div class="grid-2" id="aiCards"></div>
+        </section>
+
+        <!-- =================== RISK FLAGS VIEW =================== -->
+        <section id="view-risk" class="view" style="display:none;">
+            <div class="section-header"><div><h3>Domains Scoring ≥ 6/10</h3><p>Aggregated across the current roster</p></div></div>
+            <div class="card"><div id="riskAggregate" class="bar-chart"></div></div>
+        </section>
+
+        <!-- =================== CARE PLANS VIEW =================== -->
+        <section id="view-careplans" class="view" style="display:none;">
+            <div class="section-header">
+                <div>
+                    <h3>Care Plan Intelligence</h3>
+                    <p>AI-driven review, compliance checking, and rewriting of clinical care plans</p>
+                </div>
+            </div>
+            
+            <div class="card" style="margin-bottom: 20px; display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <h4>Select Patient (PCC Native)</h4>
+                    <select id="pccPatientSelect" style="width: 100%; padding: 8px; margin-top: 10px; margin-bottom: 10px;">
+                        <option value="">-- Select Patient --</option>
+                        <option value="1">Smith, John (101)</option>
+                        <option value="2">Doe, Jane (102)</option>
+                        <option value="3">Johnson, Bob (103)</option>
+                    </select>
+                    <button class="btn btn-primary" id="btnLoadPccPlans">Load Care Plans from PCC</button>
+                    <div id="pccPlansList" style="margin-top: 15px; max-height: 200px; overflow-y: auto;">
+                        <p class="text-muted">Select patient to load care plans</p>
+                    </div>
+                </div>
+                <div style="flex: 2; border-left: 1px solid var(--border); padding-left: 20px;">
+                    <h4 style="margin-bottom: 10px;">Care Plan Text</h4>
+                    <textarea id="careplanInput" rows="8" style="width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 12px; font-family: inherit; font-size: 14px; margin-bottom: 12px;" placeholder="Paste care plan here or load from PCC..."></textarea>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-primary" id="btnReviewCarePlan">Review &amp; Score</button>
+                        <button class="btn btn-secondary" id="btnRewriteCarePlan">Rewrite to Standard</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="card">
+                    <h4 style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+                        <span>Review Findings</span>
+                        <span id="cpScoreBadge" style="padding: 4px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; background: #E2E8F0; color: #475569;">Score: —</span>
+                    </h4>
+                    <div id="cpReviewContent" style="font-size: 14px; line-height: 1.5; color: var(--text);">
+                        <p class="text-muted">Awaiting review...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4 style="margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+                        <span>Rewritten Care Plan</span>
+                        <div>
+                            <button class="btn btn-primary" id="btnPushPcc" style="padding: 4px 10px; font-size: 12px;">Push to PCC</button>
+                        </div>
+                    </h4>
+                    <div id="cpRewriteContent" style="font-size: 14px; line-height: 1.5; color: var(--text); white-space: pre-wrap;">
+                        <p class="text-muted">Awaiting rewrite...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== MEDICATIONS VIEW =================== -->
+        <section id="view-meds" class="view" style="display:none;">
+            <div class="section-header"><div><h3>Polypharmacy &amp; High-Risk Regimens</h3><p>Patients with 10+ active meds, anticoag/opioid/insulin, or recent changes</p></div></div>
+            <div class="table-card"><table>
+                <thead><tr><th>Patient</th><th>Room</th><th>Active Meds</th><th>High-Risk</th><th>Recent Change</th><th>Interactions</th></tr></thead>
+                <tbody id="medsBody"></tbody>
+            </table></div>
+        </section>
+
+        <!-- =================== QUALITY VIEW =================== -->
+        <section id="view-quality" class="view" style="display:none;">
+            <div class="section-header"><div><h3>Facility Breakdown</h3><p>Census, critical share, and average composite score by facility</p></div></div>
+            <div class="grid-3" id="qualityCards"></div>
+        </section>
+
+        <div class="app-footer">Apex Healthcare Advanced Medicine Division</div>
+    </main>
+
+    <!-- RIGHT PANEL -->
+    <aside class="right-panel">
+        <h3 style="font-size: 15px; margin-bottom: 16px;">⚡ Live Action Feed</h3>
+        <div class="feed-list" id="feedList"></div>
+    </aside>
+</div>
+
+<!-- PATIENT SLIDE-OUT -->
+<div class="modal-overlay" id="modalOverlay"></div>
+<aside class="slide-panel" id="slidePanel">
+    <button class="modal-close" id="panelClose">×</button>
+    <div class="panel-inner" id="panelBody"></div>
+</aside>
+
+<div class="toast-holder" id="toastHolder"></div>
+
+<script src="/static/dashboard.js"></script>
+</body>
+</html>
